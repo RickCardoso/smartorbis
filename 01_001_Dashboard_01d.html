@@ -16,6 +16,16 @@
 
 	<header>
 
+		<div class="notification-box">
+			<div class="notification-icon">
+			</div>
+			<div class="notification-data">
+				<p class="notification-ip">10.244.5.2</p>
+				<p class="notification-content">Pod Status is Updated</p>
+			</div>
+			<span class="notification-status">Pod Status Update</span>
+		</div>
+
 		<nav class="navbar navbar-defalut">
 			<div class="container">
 				<div class="col-md-1 navbar-header">
@@ -37,14 +47,44 @@
 				<div class="col-md-3 options">
 					<div class="elements-right">
 						<div class="row">
-
-							<div class="hosts">
-								<a href="#">HOSTS</a>
+							<div class="dropdown hosts-dropdown">
+								<button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									HOSTS
+								</button>
+								<div class="dropdown-menu dark-menu" aria-labelledby="dropdownMenuButton">
+									<a class="dropdown-item" href="#">Action</a>
+									<a class="dropdown-item" href="#">Another action</a>
+									<a class="dropdown-item" href="#">Something else here</a>
+								</div>
 							</div>
 							<div class="controls">
 								<a class="btn menuMobile"></a>
-								<a href="" class="btn search"></a>
-								<a href="" class="btn notification"></a>
+								<div class="dropdown">
+									<button class="btn search" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+									<div class="dropdown-menu dark-menu menu-search" aria-labelledby="dropdownMenuButton">
+										<input type="text" class="search-box" placeholder="Search&hellip;">
+									</div>
+								</div>
+								<div class="dropdown">
+									<button class="btn notification" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+									<div class="dropdown-menu dark-menu notification-menu" aria-labelledby="dropdownMenuButton">
+										<div class="notification-container">
+											<div class="notification-head">
+												<span>NOTIFICATIONS</span>
+												<i class="fa fa-check-square-o"></i>
+											</div>
+											<div class="notification-row">
+												<div class="notification-icon">
+												</div>
+												<div class="notification-data">
+													<p class="notification-ip">10.244.5.2</p>
+													<p class="notification-content">Pod Status is Updated</p>
+												</div>
+												<span class="notification-status">Pod Status Update</span>
+											</div>
+										</div>
+									</div>
+								</div>
 								<a href="" class="btn setting"></a>
 
 							</div>
@@ -129,114 +169,165 @@
 						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-8">
 							<div class="cluster">
 								<h2>CLUSTERS</h2>
-								<a class="btn-ico-Down">kubernets</a>
+								<div class="dropdown">
+								  <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								    Kubernets
+								  </button>
+								  <div class="dropdown-menu dark-menu" aria-labelledby="dropdownMenuButton">
+								    <a class="dropdown-item" href="#">Action</a>
+								    <a class="dropdown-item" href="#">Another action</a>
+								    <a class="dropdown-item" href="#">Something else here</a>
+								  </div>
+								</div>
+								<div class="information-circle">
+									<div class="info-parent">
+										<div class="parent-data">
+											<span>90<span class="small">%</span></span>
+										</div>
+									</div>
+									<div class="info-item">
+										<div class="item-circle">
+											<div class="item-data">
+												<span>20</span>
+											</div>
+										</div>
+										<p class="item-caption">Containers</p>
+									</div>
+									<div class="info-item">
+										<div class="item-circle">
+											<div class="item-data">
+												<span>3</span>
+											</div>
+										</div>
+										<p class="item-caption">Applications</p>
+									</div>
+									<div class="info-item">
+										<div class="item-circle">
+											<div class="item-data">
+												<span>16</span>
+											</div>
+										</div>
+										<p class="item-caption">Pods</p>
+									</div>
+									<div class="info-item">
+										<div class="item-circle">
+											<div class="item-data">
+												<span>4</span>
+											</div>
+										</div>
+										<p class="item-caption">Services</p>
+									</div>
+									<div class="info-item">
+										<div class="item-circle">
+											<div class="item-data">
+												<span>3</span>
+											</div>
+										</div>
+										<p class="item-caption">Hosts</p>
+									</div>
 							</div>
-							<article class="graphic star">
-								<img src="img/1.png" alt="">
-							</article>
-
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-							<div class="graphic-header">
-								<hr>
-								<div class="title-graphic">
-									<h2>HOSTS</h2>
-								</div>
-								<div class="btn-last"><a class="hide" href="">Last 24 hrs</a></div>
-								<div class="btn-graphic">
-									<a href="" class="btn-reload"></a>
-									<a href="" class="btn-setting"></a>
-								</div>
-							</div>
-							<article class="graphic">
-								<img src="img/hosts.png" alt="">
-							</article>
-
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-							<div class="graphic-header">
-								<hr>
-								<div class="title-graphic">
-									<h2>VIOLATION CATEGORIES</h2>
-								</div>
-								<div class="btn-last"><a href="">Last 24 hrs</a></div>
-								<div class="btn-graphic">
-									<a href="" class="btn-reload"></a>
-									<a href="" class="btn-setting"></a>
-								</div>
-							</div>
-							<article class="graphic">
-								<img src="img/violation2.png" alt="">
-							</article>
-						</div>
-						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 g3">
-							<div class="graphic-header">
-								<hr>
-								<div class="title-graphic">
-									<h2>SOFT<br>VIOLATIONS TYPE</h2>
-								</div>
-								<div class="btn-last"><a href="">Last 24 hrs</a></div>
-								<div class="btn-graphic">
-									<a href="" class="btn-reload"></a>
-									<a href="" class="btn-setting"></a>
-								</div>
-							</div>
-							<article class="graphic soft">
-								<img src="img/soft.png">
-								<img src="img/soft-resp.png" class="hide">
-							</article>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-12 col-lg-3">
-					<article class="live-feed">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 						<div class="graphic-header">
+							<hr>
 							<div class="title-graphic">
-								<h2>LIVE FEED</h2>
+								<h2>HOSTS</h2>
 							</div>
-							<div class="btn-last"><a href="" class="hide">Last 24 hrs</a></div>
+							<div class="btn-last"><a class="hide" href="">Last 24 hrs</a></div>
 							<div class="btn-graphic">
 								<a href="" class="btn-reload"></a>
 								<a href="" class="btn-setting"></a>
 							</div>
 						</div>
-						<div class="list-live-feed neoScroll">
-							<ul>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
-								<div class="glass"></div>
-							</ul>
-						</div>
+						<article class="graphic">
+							<img src="img/hosts.png" alt="">
+						</article>
 
-					</article>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+						<div class="graphic-header">
+							<hr>
+							<div class="title-graphic">
+								<h2>VIOLATION CATEGORIES</h2>
+							</div>
+							<div class="btn-last"><a href="">Last 24 hrs</a></div>
+							<div class="btn-graphic">
+								<a href="" class="btn-reload"></a>
+								<a href="" class="btn-setting"></a>
+							</div>
+						</div>
+						<article class="graphic">
+							<img src="img/violation2.png" alt="">
+						</article>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 g3">
+						<div class="graphic-header">
+							<hr>
+							<div class="title-graphic">
+								<h2>SOFT<br>VIOLATIONS TYPE</h2>
+							</div>
+							<div class="btn-last"><a href="">Last 24 hrs</a></div>
+							<div class="btn-graphic">
+								<a href="" class="btn-reload"></a>
+								<a href="" class="btn-setting"></a>
+							</div>
+						</div>
+						<article class="graphic soft">
+							<img src="img/soft.png">
+							<img src="img/soft-resp.png" class="hide">
+						</article>
+					</div>
 				</div>
+			</div>
+			<div class="col-md-12 col-lg-3">
+				<article class="live-feed">
+					<div class="graphic-header">
+						<div class="title-graphic">
+							<h2>LIVE FEED</h2>
+						</div>
+						<div class="btn-last"><a href="" class="hide">Last 24 hrs</a></div>
+						<div class="btn-graphic">
+							<a href="" class="btn-reload"></a>
+							<a href="" class="btn-setting"></a>
+						</div>
+					</div>
+					<div class="list-live-feed neoScroll">
+						<ul>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<div class="glass"></div>
+						</ul>
+					</div>
+
+				</article>
 			</div>
 		</div>
 	</section>
