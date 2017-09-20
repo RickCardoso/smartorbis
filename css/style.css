@@ -501,8 +501,56 @@ section {
     font-size: 16px; }
   section h2 {
     font-size: 15px; }
+  section h3 {
+    font-size: 12.7px; }
   section.dashboard, section.assets, section.visibility, section.policies {
     padding: 30px 0; }
+
+.threat-row {
+  margin-top: 24px; }
+
+.donut-col.col-3 {
+  padding: 0 0 0 15px;
+  display: flex;
+  align-items: flex-end; }
+
+.donut-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0;
+  margin: auto 13px 0 auto;
+  max-width: 68px;
+  min-width: 68px;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%; }
+  .donut-chart.red {
+    border: 2px solid #ff1744; }
+  .donut-chart.yellow {
+    border: 2px solid #ffeb3b; }
+  .donut-chart.blue {
+    border: 2px solid #61cfb2; }
+
+.violations-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 100%;
+  max-width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 7px solid #061433;
+  background: #09224a;
+  font-size: 26px; }
+
+.line-col.col-9 {
+  padding: 0 30px 0 0; }
+
+.line-chart {
+  border-top: 1px solid #7aa1df;
+  border-bottom: 1px solid #7aa1df;
+  height: 64px; }
 
 .graphic-header {
   margin-top: 30px;
