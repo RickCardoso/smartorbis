@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Smart Orbis</title>
+	<link type="image/x-icon" href="img/favicon.png" rel="icon">
+	<link type="image/x-icon" href="img/favicon.png" rel="shortcut icon">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.min.css">
+	
+	
+</head>
+<body class="dashboard-01d">
+	
+	<header>
+		
+			<nav class="navbar navbar-defalut">
+				<div class="container">
+					<div class="col-md-1 navbar-header">
+						<a id="logo" href="#" class="navbar-brand"></a>
+					</div>
+					<div class="col-md-7 menu">
+											
+							<ul class="nav">
+
+								<li class="active"><a href="01_001_Dashboard_01d.html">DASHBOARD</a></li>
+								<li><a href="03_001_Visibility_Topology_01c.html">VISIBILITY</a></li>
+								<li><a href="#">POLICIES</a></li>
+								<li><a href="#">THREATS</a></li>
+								<li><a href="02_001_Pod_Information_01a.html">ASSETS</a></li>		
+								
+							</ul>
+
+					</div>
+					<div class="col-md-3 options">
+						<div class="elements-right">
+						<div class="row">
+							
+							<div class="hosts">
+								<a href="#">HOSTS</a>
+							</div>
+							<div class="controls">
+								<a   class="btn menuMobile"></a>
+								<a href="" class="btn search"></a>
+								<a href="" class="btn notification"></a>
+								<a href="" class="btn setting"></a>
+								
+							</div>
+							<div class="avatarDiv">
+								<a href="" class="avatar">
+									<img src="img/avatar.png" alt="" class="img-rounded">
+								</a>
+							</div>
+
+						</div>
+						</div>
+
+					</div>
+				</div>
+			</nav>
+
+			<nav class="navMobile">
+											
+				<ul class="nav">
+
+					<li class="active"><a href="01_001_Dashboard_01d.html">DASHBOARD</a></li>
+					<li><a href="03_001_Visibility_Topology_01c.html">VISIBILITY</a></li>
+					<li><a href="#">POLICIES</a></li>
+					<li><a href="#">THREATS</a></li>
+					<li><a href="02_001_Pod_Information_01a.html">ASSETS</a></li>		
+								
+				</ul>
+
+					
+			</nav>
+			
+				
+	</header>
+	
+	<section class="dashboard">
+		 <div class="container">
+			  <div class="row">
+			   		<div class="col-md-12 col-lg-9">
+			   			<div class="row">
+			   				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+			   					<h2>VIOLATIONS & THREATS</h2>
+			   					<article class="graphic">
+			   						<img src="img/violation.png" alt="">
+			   					</article>
+			   				</div>
+			   				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-8">
+			   					<div class="cluster">
+			   						<h2>CLUSTERS</h2>
+			   						<a  class="btn-ico-Down">kubernets</a>
+			   					</div>
+			   					<article class="graphic star">
+			   						<img src="img/1.png" alt="">
+			   					</article>
+			   					
+			   				</div>
+			   			</div>
+			   			<div class="row">
+			   				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+			   					<div class="graphic-header">
+			   						<hr>
+			   						<div class="title-graphic">
+			   							<h2>HOSTS</h2>
+			   						</div>
+			   						<div class="btn-last"><a class="hide" href="">Last 24 hrs</a></div>
+			   						<div class="btn-graphic">
+			   							<a href="" class="btn-reload"></a>
+			   							<a href="" class="btn-setting"></a>
+			   						</div>
+			   					</div>
+			   					<article class="graphic">
+			   							<img src="img/hosts.png" alt="">		
+			   					</article>
+			   					
+			   				</div>
+			   				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+			   					<div class="graphic-header">
+			   						<hr>
+			   						<div class="title-graphic">
+			   							<h2>VIOLATION CATEGORIES</h2>
+			   						</div>
+			   						<div class="btn-last"><a href="">Last 24 hrs</a></div>
+			   						<div class="btn-graphic">
+			   							<a href="" class="btn-reload"></a>
+			   							<a href="" class="btn-setting"></a>
+			   						</div>
+			   					</div>
+			   					<article class="graphic">
+			   						<img src="img/violation2.png" alt="">
+			   					</article>
+			   				</div>
+			   				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 g3">
+			   					<div class="graphic-header">
+			   						<hr>
+			   						<div class="title-graphic">
+			   							<h2>SOFT<br>VIOLATIONS TYPE</h2>
+			   						</div>
+			   						<div class="btn-last"><a href="">Last 24 hrs</a></div>
+			   						<div class="btn-graphic">
+			   							<a href="" class="btn-reload"></a>
+			   							<a href="" class="btn-setting"></a>
+			   						</div>
+			   					</div>
+			   					<article class="graphic soft">
+			   						<img src="img/soft.png">
+			   						<img src="img/soft-resp.png" class="hide">
+			   					</article>
+			   				</div>
+			   			</div>
+			   		</div>
+			   		<div class="col-md-12 col-lg-3">
+			   			<article class="live-feed">
+			   				<div class="graphic-header">
+			   						<div class="title-graphic">
+			   							<h2>LIVE FEED</h2>
+			   						</div>
+			   						<div class="btn-last"><a href="" class="hide">Last 24 hrs</a></div>
+			   						<div class="btn-graphic">
+			   							<a href="" class="btn-reload"></a>
+			   							<a href="" class="btn-setting"></a>
+			   						</div>
+			   				</div>
+			   				<div class="list-live-feed neoScroll">
+			   					<ul>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+			   					<div class="glass"></div>
+			   					</ul>
+			   				</div>
+			   					
+			   			</article>
+			   		</div>
+			   </div>
+		</div>
+	</section>
+
+
+	<footer>
+		<div class="container">
+			<h3>Copyright © 2017 SmartOrbis, All rights reserved.</h3>
+		</div>
+	</footer>
+
+	
+<script src="js/jquery-3.2.1.min.js"></script>
+<!-- <script src="libs/bootstrap/js/bootstrap.min.js"></script> -->
+<script src="js/script.js"></script>	
+</body>
+
+</html>
