@@ -15,7 +15,7 @@
 
 	<header>
 
-		<nav class="navbar navbar-defalut">
+		<nav class="navbar navbar-default">
 			<div class="container">
 				<div class="col-md-1 navbar-header">
 					<a id="logo" href="#" class="navbar-brand"></a>
@@ -37,8 +37,11 @@
 					<div class="elements-right">
 						<div class="row">
 
-							<div class="hosts">
-								<a href="#">HOSTS</a>
+							<div class="hosts dropdown">
+								<a href="#">HOSTS <i class="fa fa-triangle fa-rotate-180"></i></a>
+								<ul>
+									<li></li>
+								</ul> <!-- TODO fix hosts dropdown -->
 							</div>
 							<div class="controls">
 								<a class="btn menuMobile"></a>
@@ -85,9 +88,44 @@
 					<div class="row">
 						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 							<h2>VIOLATIONS & THREATS</h2>
-							<article class="graphic">
-								<img src="img/violation.png" alt="">
-							</article>
+							<div class="container threat-container">
+								<div class="row threat-row">
+									<div class="threat-donut-col">
+										<div class="threat-donut">
+										</div>
+									</div>
+									<div class="threat-line-col">
+										<h3>Violations</h3>
+										<div class="threat-line">
+
+										</div>
+									</div>
+								</div>
+								<div class="row threat-row">
+									<div class="threat-donut-col">
+										<div class="threat-donut">
+										</div>
+									</div>
+									<div class="threat-line-col">
+										<h3>Soft Violations</h3>
+										<div class="threat-line">
+
+										</div>
+									</div>
+								</div>
+								<div class="row threat-row">
+									<div class="threat-donut-col">
+										<div class="threat-donut">
+										</div>
+									</div>
+									<div class="threat-line-col">
+										<h3>Behaviour Anomalities</h3>
+										<div class="threat-line">
+
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-8">
 							<div class="cluster">

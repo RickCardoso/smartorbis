@@ -2,7 +2,7 @@
 	background:url('../img/logo.svg') no-repeat;
 	width:128px;
 	height:42px;
-	
+
 }
 
 
@@ -21,10 +21,10 @@ nav{
 	& ul li {
 		opacity: 0.5;
 		&:not(:first-child){
-			margin-left:16px; 
+			margin-left:16px;
 		}
 		&.active{
-				
+
 				opacity: 1;
 				a{color:$activeColor;opacity:0.85;}
 				a:hover{color:$activeColor;opacity:1;}
@@ -38,16 +38,16 @@ nav{
 			padding:0 15px;
 			font-weight: 600;
 			font-size:14px;
-			
-			
+
+
 			&:hover{
-				
+
 				color:$font-color;
 				text-decoration: none;
 			}
 			&:before{
 				content: '';
-				display: block;		
+				display: block;
 				width:18px;
 				height: 22px;
 				float:left;
@@ -57,7 +57,7 @@ nav{
 			}
 
 		}
-		
+
 
 		&:first-child a:before{
 			background:url('../img/icon/dashboard.svg') no-repeat;
@@ -108,13 +108,6 @@ nav{
 				font-size: 15px;
 				display: inline-block;
 				padding:10px 0;
-				&:after{
-					content: "\f0d7";
-					margin-left: 10px;
-					font-family: FontAwesome;
-					font-size: 14px
-
-				}
 			}
 		}
 
@@ -122,12 +115,12 @@ nav{
 
 }
 
-.controls{ 
-	
+.controls{
+
 	margin:12px 0;
 	display: flex;
     justify-content: flex-end;
-	
+
 	.btn{
 	display:block;
 	float:left;
@@ -137,32 +130,32 @@ nav{
 	background-size:100%;
 
 	&:not(:first-child){margin-left:6px;}
-	
+
 	&.menuMobile{
 				display: none;
-				background:url('../img/icon/menu.svg')no-repeat;				
+				background:url('../img/icon/menu.svg')no-repeat;
 				&:hover{background:url('../img/icon/menu-active.svg')no-repeat;}
 	}
 
 	&.menuMobile.closer{
 				display: none;
-				background:url('../img/icon/closer.svg')no-repeat;				
+				background:url('../img/icon/closer.svg')no-repeat;
 				&:hover{background:url('../img/icon/closer.svg')no-repeat;}
 	}
 
 
 	&.search{
-				background:url('../img/icon/search-active.svg')no-repeat;				
+				background:url('../img/icon/search-active.svg')no-repeat;
 				&:hover{background:url('../img/icon/search.svg')no-repeat;}
 	}
 
 	&.notification{
-				background:url('../img/icon/notification-active.svg')no-repeat;		
+				background:url('../img/icon/notification-active.svg')no-repeat;
 				&:hover{background:url('../img/icon/notification.svg')no-repeat;}
 	}
 
 	&.setting{
-				background:url('../img/icon/setting-active.svg')no-repeat;		
+				background:url('../img/icon/setting-active.svg')no-repeat;
 				&:hover{background:url('../img/icon/setting.svg')no-repeat;}
 	}
 
@@ -192,7 +185,7 @@ header nav.navMobile{
 	height:auto;
 
 	ul{
-		
+
 		li{
 			margin-left:initial;
 			width:100%;

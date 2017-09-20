@@ -1,4 +1,8 @@
-
+@import "variables";
+@import "fonts";
+@import "responsive";
+@import "header";
+@import "footer";
 
 *{
 	font-family: $font;
@@ -22,7 +26,7 @@ body{
 
 
 /*BOOTSTRAP*/
-header{ 
+header{
 	.navbar-header.col-md-1{
 		max-width:12%;
 		padding-top:9px;
@@ -37,16 +41,28 @@ header{
 section{
 	height:auto;
 	h1{font-size:16px;}
-	h2{font-size:15px;}	
+	h2{font-size:15px;}
+	h3{font-size: 12.7px;}
 
 	&.dashboard,&.assets,&.visibility,&.policies{
 		padding:30px 0;
-	}	
+	}
+}
+
+.threat-container {
+	max-width: 100% !important;
+}
+
+.threat-row {
+	padding: 0 24.6875px;
+	@media screen and (max-width: 575px) {
+		padding: 0 15px;
+	}
 }
 
 
 .graphic-header{
-		
+
 	margin-top:30px;
 	padding-left:36px;
 	width:335px;
@@ -61,7 +77,7 @@ section{
 		h2{
 
 		}
-		
+
 	}
 	.btn-last{
 		min-width: 78px;
@@ -89,7 +105,7 @@ section{
 }
 .btn-reload, .btn-setting{
 	float:left;
-	
+
 	display:inline-block;
 }
 
@@ -97,9 +113,9 @@ section{
 	width:12px;
 	height:12px;
 	margin-left:10px;
-	background:url('../img/icon/reload.svg')no-repeat;				
+	background:url('../img/icon/reload.svg')no-repeat;
 	&:hover{background:url('../img/icon/reload-active.svg')no-repeat;}
-	
+
 }
 
 .btn-setting{
@@ -107,9 +123,9 @@ section{
 	height:7px;
 	margin:3px 0;
 	float:right;
-	background:url('../img/icon/setting-graphic.svg')no-repeat;				
+	background:url('../img/icon/setting-graphic.svg')no-repeat;
 	&:hover{background:url('../img/icon/setting-graphic-active.svg')no-repeat;}
-	
+
 }
 
 .graphic img{
@@ -139,7 +155,7 @@ section{
 	top:0;
 	left:0;
 }
-		
+
 .btn-ico-Down{
 	opacity: 0.8!important;
 	color:$activeColor!important;
@@ -176,7 +192,7 @@ section{
 			span{
 				color:#5fcbae;
 			}
-			
+
 		}
 		.glass{
 		 	width: 90%;
@@ -188,7 +204,7 @@ section{
     		left:0;
 		}
 	}
-}	
+}
 
 .mask{overflow:hidden;}
 
@@ -227,7 +243,7 @@ section{
 		li{
 			transition: 0.6s;
 			cursor:pointer;
-			
+
 			display: inline-flex;
 			width:100%;
 			height: 68px;
@@ -244,28 +260,28 @@ section{
 
 			}
 			}
-			
+
 	}
 }
 
 section.assets .menu-page ul li{
 
 	&:before{content:'';width:70px;height:70px;margin:0 17px;display:inline-block;transition:0.5s;}
-	
+
 	&:first-child:before{
-		background:url('../img/btn-host.png') no-repeat;	
+		background:url('../img/btn-host.png') no-repeat;
 	}&:first-child:hover:before,&.active:first-child:before{background:url('../img/btn-host-active.png') no-repeat;}
 
 	&:nth-child(2):before{
-		background:url('../img/btn-pod.png') no-repeat;	
+		background:url('../img/btn-pod.png') no-repeat;
 	}&:nth-child(2):hover:before,&.active:nth-child(2):before{background:url('../img/btn-pod-active.png') no-repeat;}
 
 	&:nth-child(3):before{
-		background:url('../img/btn-behavior.png') no-repeat;	
+		background:url('../img/btn-behavior.png') no-repeat;
 	}&:nth-child(3):hover:before,&.active:nth-child(3):before{background:url('../img/btn-behavior-active.png') no-repeat;}
 
 	&:nth-child(4):before{
-		background:url('../img/btn-behaviortwo.png') no-repeat;	
+		background:url('../img/btn-behaviortwo.png') no-repeat;
 	}&:nth-child(4):hover:before,&.active:nth-child(4):before{background:url('../img/btn-behaviortwo-active.png') no-repeat;}
 }
 section.assets .menu-page ul li.active span:after{
@@ -278,21 +294,21 @@ section.assets .menu-page ul li:hover span:after{
 section.policies .menu-page ul li{
 
 	&:before{content:'';width:70px;height:70px;margin:0 17px;display:inline-block;transition:0.5s;}
-	
+
 	&:first-child:before{
-		background:url('../img/btn-assets.png') no-repeat;	
+		background:url('../img/btn-assets.png') no-repeat;
 	}&:first-child:hover:before,&.active:first-child:before{background:url('../img/btn-assets-active.png') no-repeat;}
 
 	&:nth-child(2):before{
-		background:url('../img/btn-assets.png') no-repeat;	
+		background:url('../img/btn-assets.png') no-repeat;
 	}&:nth-child(2):hover:before,&.active:nth-child(2):before{background:url('../img/btn-assets-active.png') no-repeat;}
 
 	&:nth-child(3):before{
-		background:url('../img/btn-assets.png') no-repeat;	
+		background:url('../img/btn-assets.png') no-repeat;
 	}&:nth-child(3):hover:before,&.active:nth-child(3):before{background:url('../img/btn-assets-active.png') no-repeat;}
 
 	&:nth-child(4):before{
-		background:url('../img/btn-assets.png') no-repeat;	
+		background:url('../img/btn-assets.png') no-repeat;
 	}&:nth-child(4):hover:before,&.active:nth-child(4):before{background:url('../img/btn-assets-active.png') no-repeat;}
 }
 section.policies .menu-page ul li.active span:after{
@@ -312,7 +328,7 @@ section.policies .menu-page ul li:hover span:after{
 		min-width: 900px;
 		thead{
 			tr{
-		
+
 				th{
 					color:#7aa1df;
 					border-top:initial;
@@ -321,7 +337,7 @@ section.policies .menu-page ul li:hover span:after{
 					&:last-child{text-align:center;}
 				}
 			}
-			
+
 		}
 		tbody{
 			tr{
@@ -344,21 +360,21 @@ section.policies .menu-page ul li:hover span:after{
 section.visibility .menu-page ul li{
 
 	&:before{content:'';width:70px;height:70px;margin:0 17px;display:inline-block;transition:0.5s;}
-	
+
 	&:first-child:before{
-		background:url('../img/btn-traffic.png') no-repeat;	
+		background:url('../img/btn-traffic.png') no-repeat;
 	}&:first-child:hover:before,&.active:first-child:before{background:url('../img/btn-traffic-active.png') no-repeat;}
 
 	&:nth-child(2):before{
-		background:url('../img/btn-traffic.png') no-repeat;	
+		background:url('../img/btn-traffic.png') no-repeat;
 	}&:nth-child(2):hover:before,&.active:nth-child(2):before{background:url('../img/btn-traffic-active.png') no-repeat;}
 
 	&:nth-child(3):before{
-		background:url('../img/btn-traffic.png') no-repeat;	
+		background:url('../img/btn-traffic.png') no-repeat;
 	}&:nth-child(3):hover:before,&.active:nth-child(3):before{background:url('../img/btn-traffic-active.png') no-repeat;}
 
 	&:nth-child(4):before{
-		background:url('../img/btn-traffic.png') no-repeat;	
+		background:url('../img/btn-traffic.png') no-repeat;
 	}&:nth-child(4):hover:before,&.active:nth-child(4):before{background:url('../img/btn-traffic-active.png') no-repeat;}
 }
 section.visibility .menu-page ul li.active span:after{
@@ -390,15 +406,15 @@ section.visibility .menu-page ul li:hover span:after{
 		hr{border-top: 1px solid #61cfb2;}
 	}
 	div.data-traffic{
-		
+
 		div.row {
-			
+
 			div{font-size:14px; padding-left:5px;padding-right:5px;}
 			margin-bottom: 15px;
 		}
 
-				
-		.row div:first-child:before{	
+
+		.row div:first-child:before{
 				content: '';
 				width: 20px;
 				height: 17px;
@@ -406,17 +422,17 @@ section.visibility .menu-page ul li:hover span:after{
 				display: inline-block;
 				transition: 0.5s;
 		}
-		.row.up div:first-child:before{	
+		.row.up div:first-child:before{
 				background: url(../img/icon/ok-green.svg) no-repeat;
 		}
 
-		.row.down div:first-child:before{	
+		.row.down div:first-child:before{
 				background: url(../img/icon/ok.svg) no-repeat;
 		}
-		.row div:nth-child(2){	
+		.row div:nth-child(2){
 				    text-align: center;
 				   }
-		.row div:nth-child(2):before{	
+		.row div:nth-child(2):before{
 				    content: '';
 				    width: 91px;
 				    height: 5px;
@@ -426,11 +442,11 @@ section.visibility .menu-page ul li:hover span:after{
 				    display: inline-block;
 				    transition: 0.5s;
 		}
-		.row.up div:nth-child(2):before{	
+		.row.up div:nth-child(2):before{
 				background: url(../img/icon/crow-right.svg) no-repeat;
 		}
 
-		.row.down div:nth-child(2):before{	
+		.row.down div:nth-child(2):before{
 				background: url(../img/icon/crow-left.svg) no-repeat;
 		}
 
@@ -439,7 +455,7 @@ section.visibility .menu-page ul li:hover span:after{
 
 
 	div.traffic{
-		 
+
 		img{width:100%;}
 	}
 }
@@ -498,22 +514,22 @@ section.policies{
 		.btn{
 			margin-left: 18px;
 		}
-	
+
 }
 .modal#myModal{
 	background-color:rgba(0,0,0,0.5);
-	
+
 	.modal-dialog{
 			max-width:1058px;
-		
+
 		width:100%;
-	
+
 		margin-top: 2vh;
 		  overflow-y: scroll;
    		 height: 96vh;
 		.modal-content{
 			h1{font-size:16px;margin-bottom:45px;}
-			
+
 		padding:30px;
 		background:$primary;
 		div{font-size: 13.5px;
@@ -529,16 +545,16 @@ section.policies{
 				button{width:initial;}
 				}
 			}
-			.subtitle{ 
+			.subtitle{
 				display: inline-block;
 				padding:12px 0;
 				span{color:#61cfb2;}
 			}
 		}
-	
+
 		}
 	}
-	
+
 
 }
 
@@ -573,18 +589,18 @@ section.policies{
 	}
 	.firstLine{
 		margin-bottom: 20px;
-		
+
 	}
-	
+
 		input.role{
 		margin-right:15px;
 		}
-	
+
 
 	.btn-right{float:right;}
 
 }
-	
+
 
 .podSelector.two{
 	input[type=text],select,option,label{
