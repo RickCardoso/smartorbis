@@ -9,6 +9,7 @@
 	<link type="image/x-icon" href="img/favicon.png" rel="shortcut icon">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body class="dashboard-01d">
@@ -85,9 +86,45 @@
 					<div class="row">
 						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 							<h2>VIOLATIONS & THREATS</h2>
-							<article class="graphic">
-								<img src="img/violation.png" alt="">
-							</article>
+							<div class="row threat-row">
+								<div class="col-3 donut-col">
+									<div class="donut-chart red">
+										<div class="violations-data">12</div>
+									</div>
+								</div>
+								<div class="col-9 line-col">
+									<h3>Violations</h3>
+									<div class="line-chart">
+
+									</div>
+								</div>
+							</div>
+							<div class="row threat-row">
+								<div class="col-3 donut-col">
+									<div class="donut-chart yellow">
+										<div class="violations-data">6</div>
+									</div>
+								</div>
+								<div class="col-9 line-col">
+									<h3>Soft Violations</h3>
+									<div class="line-chart">
+
+									</div>
+								</div>
+							</div>
+							<div class="row threat-row">
+								<div class="col-3 donut-col">
+									<div class="donut-chart blue">
+										<div class="violations-data">3</div>
+									</div>
+								</div>
+								<div class="col-9 line-col">
+									<h3>Behaviour Anomalies</h3>
+									<div class="line-chart">
+
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-8">
 							<div class="cluster">
@@ -215,13 +252,6 @@
 	<script src="libs/jquery/jquery-3.2.1.js"></script>
 	<script src="libs/popper/popper.js"></script>
 	<script src="libs/bootstrap/js/bootstrap.js"></script>
-
-	<!-- Font-Awesome -->
-	<script defer src="ext-res/font-awesome/packs/solid.js"></script>
-	<script defer src="ext-res/font-awesome/packs/regular.js"></script>
-	<script defer src="ext-res/font-awesome/packs/light.js"></script>
-	<script defer src="ext-res/font-awesome/fontawesome.js"></script>
-	<!-- -->
 
 	<script src="js/script.js"></script>
 </body>
