@@ -1,0 +1,131 @@
+.app-navbar {
+  min-height: 65px;
+  @include make-col-ready();
+  flex: 0 0 937px;
+  max-width: 937px;
+  @include media-breakpoint-down(md) {
+    @include make-col(1, 1);
+  }
+}
+
+.app-brand {
+  padding: 0.5rem;
+  margin-right: 75px;
+}
+
+.app-toggler {
+  color: #f5f5f5;
+}
+
+.app-nav-link {
+  display: flex;
+  align-items: center;
+  margin: auto 9px;
+  opacity: 0.3;
+  color: #f5f5f5;
+  fill: #f5f5f5;
+  font-size: 0.868125em;
+  text-transform: uppercase;
+  & .icon {
+    width: 19px;
+    height: 21px;
+    margin-right: 11px;
+  }
+  &:hover,
+  &:focus {
+    opacity: 1;
+    color: #f5f5f5;
+  }
+  &:active,
+  &.active {
+    opacity: 1;
+    color: #61cfb2;
+    fill: #12ffcd;
+  }
+}
+
+.user-navbar {
+  @include make-col-ready();
+  flex: 1 1 367px;
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  @include media-breakpoint-down(md) {
+    @include make-col(1, 1);
+  }
+}
+
+.user-navbar-nav { // navbar-nav fix for small screens
+  flex-flow: row;
+  & .user-nav-link {
+    padding: 0.5rem;
+  }
+  & .dropdown-menu {
+    position: absolute;
+  }
+}
+
+.user-nav-link {
+  display: flex;
+  align-items: center;
+  color: #61cfb2;
+  fill: #61cfb2;
+  font-size: 1em;
+  text-transform: uppercase;
+  & .icon {
+    width: 25px;
+    height: 25px;
+  }
+  & .fa-layers {
+    height: 25px;
+    width: auto;
+  }
+  &:hover,
+  &:focus {
+    color: #fff;
+    fill: #fff;
+  }
+  &:active,
+  &.active {
+    color: #fff;
+    fill: #fff;
+  }
+}
+
+#hostDropDown {
+  margin-right: 49px;
+  @include media-breakpoint-down(xs) {
+    margin-right: 12px;
+  }
+}
+
+.user-dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+.host-icon {
+  font-size: 0.4em;
+  padding-left: 11px;
+  margin-bottom: 1px;
+}
+
+.avatar-img {
+  @include crossBorder(2px);
+  width: 39px;
+  height: 39px;
+}
+
+.avatar-icon {
+  font-size: 0.8em;
+  padding-left: 11px;
+  margin-bottom: 1px;
+}
+
+.app-notification.fa-layers-top-left {
+  -webkit-transform: scale(0.54);
+  transform: scale(0.54);
+  -webkit-transform-origin: -15% 10%;
+  transform-origin: -15% 10%;
+  border: 3px solid #032e74;
+}

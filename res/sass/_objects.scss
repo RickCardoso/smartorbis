@@ -1,0 +1,27 @@
+.marker {
+  @include crossGradient(radial-gradient(#081839, #061433));
+  border: 2px solid #2e3192;
+  @include crossBorder(50%);
+  width: 57px;
+  height: 57px;
+  & span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 13%;
+    height: 74%;
+    background: #09224a;
+    @include crossBorder(50%);
+    font-size: 1.368125em;
+    line-height: 100%;
+  }
+  &.red {
+    border-color: #ff1744;
+  }
+  &.yellow {
+    border-color: #ffeb3b;
+  }
+  &.blue {
+    border-color: #61cfb2;
+  }
+}

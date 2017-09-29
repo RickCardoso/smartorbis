@@ -1,0 +1,19 @@
+.threats-col {
+  @include make-col-ready();
+  @include make-col(430, 1340);
+  & .activity-content {
+    max-width: 312px;
+  }
+  & .marker {
+    width: 68px;
+    height: 68px;
+    & span {
+      font-size: 1.631875em;
+    }
+  }
+}
+
+.clusters-col {
+  @include make-col-ready();
+  @include make-col(910, 1340);
+}

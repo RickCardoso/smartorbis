@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Smart Orbis</title>
+	<link type="image/x-icon" href="img/favicon.png" rel="icon">
+	<link type="image/x-icon" href="img/favicon.png" rel="shortcut icon">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body class="dashboard-01d">
+
+	<header>
+
+		<div class="notification-box">
+			<div class="notification-icon">
+			</div>
+			<div class="notification-data">
+				<p class="notification-ip">10.244.5.2</p>
+				<p class="notification-content">Pod Status is Updated</p>
+			</div>
+			<span class="notification-status">Pod Status Update</span>
+		</div>
+
+		<nav class="navbar navbar-defalut">
+			<div class="container">
+				<div class="col-md-1 navbar-header">
+					<a id="logo" href="#" class="navbar-brand"></a>
+				</div>
+				<div class="col-md-7 menu">
+
+					<ul class="nav">
+
+						<li class="active"><a href="01_001_Dashboard_01d.html">DASHBOARD</a></li>
+						<li><a href="03_001_Visibility_Topology_01c.html">VISIBILITY</a></li>
+						<li><a href="#">POLICIES</a></li>
+						<li><a href="#">THREATS</a></li>
+						<li><a href="02_001_Pod_Information_01a.html">ASSETS</a></li>
+
+					</ul>
+
+				</div>
+				<div class="col-md-3 options">
+					<div class="elements-right">
+						<div class="row">
+							<div class="dropdown hosts-dropdown">
+								<button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									HOSTS
+								</button>
+								<div class="dropdown-menu dark-menu" aria-labelledby="dropdownMenuButton">
+									<a class="dropdown-item" href="#">Action</a>
+									<a class="dropdown-item" href="#">Another action</a>
+									<a class="dropdown-item" href="#">Something else here</a>
+								</div>
+							</div>
+							<div class="controls">
+								<a class="btn menuMobile"></a>
+								<div class="dropdown">
+									<button class="btn search" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+									<div class="dropdown-menu dark-menu menu-search" aria-labelledby="dropdownMenuButton">
+										<input type="text" class="search-box" placeholder="Search&hellip;">
+									</div>
+								</div>
+								<div class="dropdown">
+									<button class="btn notification" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+									<div class="dropdown-menu dark-menu notification-menu" aria-labelledby="dropdownMenuButton">
+										<div class="notification-container">
+											<div class="notification-head">
+												<span>NOTIFICATIONS</span>
+												<i class="fa fa-check-square-o"></i>
+											</div>
+											<div class="notification-row">
+												<div class="notification-icon">
+												</div>
+												<div class="notification-data">
+													<p class="notification-ip">10.244.5.2</p>
+													<p class="notification-content">Pod Status is Updated</p>
+												</div>
+												<span class="notification-status">Pod Status Update</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="" class="btn setting"></a>
+
+							</div>
+							<div class="avatarDiv">
+								<a href="" class="avatar">
+									<img src="img/avatar.png" alt="" class="img-rounded">
+								</a>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</nav>
+
+		<nav class="navMobile">
+
+			<ul class="nav">
+
+				<li class="active"><a href="01_001_Dashboard_01d.html">DASHBOARD</a></li>
+				<li><a href="03_001_Visibility_Topology_01c.html">VISIBILITY</a></li>
+				<li><a href="#">POLICIES</a></li>
+				<li><a href="#">THREATS</a></li>
+				<li><a href="02_001_Pod_Information_01a.html">ASSETS</a></li>
+
+			</ul>
+
+
+		</nav>
+
+
+	</header>
+
+	<section class="dashboard">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-lg-9">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+							<h2>VIOLATIONS & THREATS</h2>
+							<div class="row threat-row">
+								<div class="col-3 donut-col">
+									<div class="donut-chart red">
+										<div class="violations-data">12</div>
+									</div>
+								</div>
+								<div class="col-9 line-col">
+									<h3>Violations</h3>
+									<div class="line-chart">
+
+									</div>
+								</div>
+							</div>
+							<div class="row threat-row">
+								<div class="col-3 donut-col">
+									<div class="donut-chart yellow">
+										<div class="violations-data">6</div>
+									</div>
+								</div>
+								<div class="col-9 line-col">
+									<h3>Soft Violations</h3>
+									<div class="line-chart">
+
+									</div>
+								</div>
+							</div>
+							<div class="row threat-row">
+								<div class="col-3 donut-col">
+									<div class="donut-chart blue">
+										<div class="violations-data">3</div>
+									</div>
+								</div>
+								<div class="col-9 line-col">
+									<h3>Behaviour Anomalies</h3>
+									<div class="line-chart">
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-8">
+							<div class="cluster">
+								<h2>CLUSTERS</h2>
+								<div class="dropdown">
+								  <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								    Kubernets
+								  </button>
+								  <div class="dropdown-menu dark-menu" aria-labelledby="dropdownMenuButton">
+								    <a class="dropdown-item" href="#">Action</a>
+								    <a class="dropdown-item" href="#">Another action</a>
+								    <a class="dropdown-item" href="#">Something else here</a>
+								  </div>
+								</div>
+								<div class="information-circle">
+									<div class="info-parent">
+										<div class="parent-data">
+											<span>90<span class="small">%</span></span>
+										</div>
+									</div>
+									<div class="info-item">
+										<div class="item-circle">
+											<div class="item-data">
+												<span>20</span>
+											</div>
+										</div>
+										<p class="item-caption">Containers</p>
+									</div>
+									<div class="info-item">
+										<div class="item-circle">
+											<div class="item-data">
+												<span>3</span>
+											</div>
+										</div>
+										<p class="item-caption">Applications</p>
+									</div>
+									<div class="info-item">
+										<div class="item-circle">
+											<div class="item-data">
+												<span>16</span>
+											</div>
+										</div>
+										<p class="item-caption">Pods</p>
+									</div>
+									<div class="info-item">
+										<div class="item-circle">
+											<div class="item-data">
+												<span>4</span>
+											</div>
+										</div>
+										<p class="item-caption">Services</p>
+									</div>
+									<div class="info-item">
+										<div class="item-circle">
+											<div class="item-data">
+												<span>3</span>
+											</div>
+										</div>
+										<p class="item-caption">Hosts</p>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+						<div class="graphic-header">
+							<hr>
+							<div class="title-graphic">
+								<h2>HOSTS</h2>
+							</div>
+							<div class="btn-last"><a class="hide" href="">Last 24 hrs</a></div>
+							<div class="btn-graphic">
+								<a href="" class="btn-reload"></a>
+								<a href="" class="btn-setting"></a>
+							</div>
+						</div>
+						<article class="graphic">
+							<img src="img/hosts.png" alt="">
+						</article>
+
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+						<div class="graphic-header">
+							<hr>
+							<div class="title-graphic">
+								<h2>VIOLATION CATEGORIES</h2>
+							</div>
+							<div class="btn-last"><a href="">Last 24 hrs</a></div>
+							<div class="btn-graphic">
+								<a href="" class="btn-reload"></a>
+								<a href="" class="btn-setting"></a>
+							</div>
+						</div>
+						<article class="graphic">
+							<img src="img/violation2.png" alt="">
+						</article>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 g3">
+						<div class="graphic-header">
+							<hr>
+							<div class="title-graphic">
+								<h2>SOFT<br>VIOLATIONS TYPE</h2>
+							</div>
+							<div class="btn-last"><a href="">Last 24 hrs</a></div>
+							<div class="btn-graphic">
+								<a href="" class="btn-reload"></a>
+								<a href="" class="btn-setting"></a>
+							</div>
+						</div>
+						<article class="graphic soft">
+							<img src="img/soft.png">
+							<img src="img/soft-resp.png" class="hide">
+						</article>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12 col-lg-3">
+				<article class="live-feed">
+					<div class="graphic-header">
+						<div class="title-graphic">
+							<h2>LIVE FEED</h2>
+						</div>
+						<div class="btn-last"><a href="" class="hide">Last 24 hrs</a></div>
+						<div class="btn-graphic">
+							<a href="" class="btn-reload"></a>
+							<a href="" class="btn-setting"></a>
+						</div>
+					</div>
+					<div class="list-live-feed neoScroll">
+						<ul>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<li>Pod suspected for soft violation • <span>10.244.5.2</span></li>
+							<div class="glass"></div>
+						</ul>
+					</div>
+
+				</article>
+			</div>
+		</div>
+	</section>
+
+
+	<footer>
+		<div class="container">
+			<h3>Copyright © 2017 SmartOrbis, All rights reserved.</h3>
+		</div>
+	</footer>
+
+
+	<script src="libs/jquery/jquery-3.2.1.js"></script>
+	<script src="libs/popper/popper.js"></script>
+	<script src="libs/bootstrap/js/bootstrap.js"></script>
+
+	<script src="js/script.js"></script>
+</body>
+
+</html>

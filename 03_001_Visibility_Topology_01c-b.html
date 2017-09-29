@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Smart Orbis</title>
+	<link type="image/x-icon" href="img/favicon.png" rel="icon">
+	<link type="image/x-icon" href="img/favicon.png" rel="shortcut icon">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+
+	<header>
+
+		<nav class="navbar navbar-defalut">
+			<div class="container">
+				<div class="col-md-1 navbar-header">
+					<a id="logo" href="#" class="navbar-brand"></a>
+				</div>
+				<div class="col-md-7 menu">
+
+					<ul class="nav">
+
+						<li><a href="01_001_Dashboard_01d.html">DASHBOARD</a></li>
+						<li class="active"><a href="03_001_Visibility_Topology_01c.html">VISIBILITY</a></li>
+						<li><a href="04_001_Policies_01a.html">POLICIES</a></li>
+						<li><a href="#">THREATS</a></li>
+						<li><a href="02_001_Pod_Information_01a.html">ASSETS</a></li>
+
+					</ul>
+
+				</div>
+				<div class="col-md-3 options">
+					<div class="elements-right">
+						<div class="row">
+
+							<div class="hosts">
+								<a href="#">HOSTS</a>
+							</div>
+							<div class="controls">
+								<a class="btn menuMobile"></a>
+								<a href="" class="btn search"></a>
+								<a href="" class="btn notification"></a>
+								<a href="" class="btn setting"></a>
+
+							</div>
+							<div class="avatarDiv">
+								<a href="" class="avatar">
+									<img src="img/avatar.png" alt="" class="img-rounded">
+								</a>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</nav>
+
+		<nav class="navMobile">
+
+			<ul class="nav">
+
+				<li><a href="01_001_Dashboard_01d.html">DASHBOARD</a></li>
+				<li class="active"><a href="03_001_Visibility_Topology_01c.html">VISIBILITY</a></li>
+				<li><a href="04_001_Policies_01a.html">POLICIES</a></li>
+				<li><a href="#">THREATS</a></li>
+				<li><a href="02_001_Pod_Information_01a.html">ASSETS</a></li>
+
+			</ul>
+
+
+		</nav>
+
+
+	</header>
+
+	<section class="visibility">
+
+		<div class="container">
+			<h1>VISIBILITY</h1>
+			<div class="row">
+
+				<div class="col-md-12 col-lg-3">
+					<div class="menu-page">
+						<ul>
+							<li id="btn-net" class="active"><span>Network Topology View</span></li>
+							<li id="btn-view"><span>Traffic View</span></li>
+							<li id="btn-bet"><span>Traffic Between</span></li>
+							<li id="btn-aut"><span>Network Audit</span></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-md-12 col-lg-9 top-1">
+
+					<div class="row">
+						<div class="col-md-6 col-lg-8 ">
+							<div class="topology">
+								<img src="img/topology.png" alt="">
+							</div>
+
+						</div>
+
+						<div class="col-md-6 col-lg-4">
+							<div class="description">
+								<div>
+									<h4>IP:</h4>
+									<p>10.244.6.19</p>
+									<h4>Name:</h4>
+									<p>10.244.6.19</p>
+									<h4>Host:</h4>
+									<p>172.31.56.123</p>
+									<h4>App:</h4>
+									<p>sock-shop</p>
+									<h4>Time:</h4>
+									<p>2017-03-05T09:41:14Z</p>
+									<hr>
+								</div>
+
+								<div class="data-traffic">
+									<h4>Data Traffic:</h4>
+									<div class="row up">
+										<div class="col-xl-4">10.244.5.19</div>
+										<div class="col-xl-4">666.24 KB</div>
+										<div class="col-xl-4">10.244.5.19</div>
+									</div>
+									<div class="row down">
+										<div class="col-xl-4">10.244.5.19</div>
+										<div class="col-xl-4">611.58 KB</div>
+										<div class="col-xl-4">10.244.5.19</div>
+									</div>
+								</div>
+
+								<div class="traffic">
+									<img src="img/data-traffic.png" alt="">
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+
+			</div>
+
+
+	</section>
+
+
+	<footer>
+		<div class="container">
+			<h3>Copyright © 2017 SmartOrbis, All rights reserved.</h3>
+		</div>
+	</footer>
+
+
+	<script src="libs/jquery/jquery-3.2.1.js"></script>
+	<script src="libs/popper/popper.js"></script>
+	<script src="libs/bootstrap/js/bootstrap.js"></script>
+
+	<script src="js/script.js"></script>
+</body>
+
+</html>

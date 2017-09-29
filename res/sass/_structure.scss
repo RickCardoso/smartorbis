@@ -1,0 +1,28 @@
+.app-wrap { // limit width
+  max-width: 1620px;
+  width: 100%;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.app-header {
+  background: #032763;
+  & .app-wrap {
+    background: #032e74;
+  }
+}
+
+.app-main {
+  background: #09224a;
+}
+
+.app-footer {
+  background: #061a3c;
+  font-size: 0.75em;
+  text-align: center;
+  padding: 21px 0 146px;
+  & p {
+    color: #7aa1df;
+  }
+}

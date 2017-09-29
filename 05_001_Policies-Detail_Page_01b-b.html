@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Smart Orbis</title>
+	<link type="image/x-icon" href="img/favicon.png" rel="icon">
+	<link type="image/x-icon" href="img/favicon.png" rel="shortcut icon">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body class="Pod_Information_01a">
+
+	<header>
+
+		<nav class="navbar navbar-defalut">
+			<div class="container">
+				<div class="col-md-1 navbar-header">
+					<a id="logo" href="#" class="navbar-brand"></a>
+				</div>
+				<div class="col-md-7 menu">
+
+					<ul class="nav">
+
+						<li><a href="01_001_Dashboard_01d.html">DASHBOARD</a></li>
+						<li><a href="03_001_Visibility_Topology_01c.html">VISIBILITY</a></li>
+						<li class="active"><a href="04_001_Policies_01a.html">POLICIES</a></li>
+						<li><a href="#">THREATS</a></li>
+						<li><a href="02_001_Pod_Information_01a.html">ASSETS</a></li>
+
+					</ul>
+
+				</div>
+				<div class="col-md-3 options">
+					<div class="elements-right">
+						<div class="row">
+
+							<div class="hosts">
+								<a href="#">HOSTS</a>
+							</div>
+							<div class="controls">
+								<a class="btn menuMobile"></a>
+								<a href="" class="btn search"></a>
+								<a href="" class="btn notification"></a>
+								<a href="" class="btn setting"></a>
+
+							</div>
+							<div class="avatarDiv">
+								<a href="" class="avatar">
+									<img src="img/avatar.png" alt="" class="img-rounded">
+								</a>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</nav>
+
+		<nav class="navMobile">
+
+			<ul class="nav">
+
+				<li><a href="01_001_Dashboard_01d.html">DASHBOARD</a></li>
+				<li><a href="03_001_Visibility_Topology_01c.html">VISIBILITY</a></li>
+				<li class="active"><a href="04_001_Policies_01a.html">POLICIES</a></li>
+				<li><a href="#">THREATS</a></li>
+				<li><a href="02_001_Pod_Information_01a.html">ASSETS</a></li>
+
+			</ul>
+
+
+		</nav>
+
+
+	</header>
+
+	<!-- Modal content-->
+	<div class="modal" id="myModal" role="dialog">
+		<div class="modal-dialog neoScroll">
+
+
+			<div class="modal-content">
+				<h1>POLICY DETAILS</h1>
+				<div class="row">
+					<div class="col-md-3">
+						<span>Plicy Id:</span> cat-db-2290683463
+					</div>
+					<div class="col-md-3">
+						<span>Plicy Type:</span> manual
+					</div>
+					<div class="col-md-3">
+						<span>Learning Time:</span> 25 Minutes
+					</div>
+					<div class="col-md-3">
+						<span>Date:</span> 07/24/17 - 08:20:09 [UTC]
+					</div>
+				</div>
+
+				<div class="col-md-12">
+					<div class="modal-top-buttons">
+						<button type="button" class="btn btn-md btn-green">LIST VIEW</button>
+						<button type="button" class="btn btn-md btn-alpha">JSON VIEW</button>
+					</div>
+				</div>
+
+				<div>
+					<div class="step">
+						<span class="step-ingress">INGRESS</span>
+						<span class="step-egress">EGRESS</span>
+					</div>
+				</div>
+				<div class="row from-area">
+					<div class="col-md-6">
+						<div class="subtitle">
+							<span>FROM</span><a class="icon"><img src="img/icon/plus.svg" alt=""></a>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<button type="button" class="btn btn-md btn-green">EDIT</button>
+					</div>
+				</div>
+				<form action="">
+					<div class="row">
+						<div class="col-md-12 col-lg-6">
+							<div class="podSelector">
+								<div class="firstLine">
+									<label><span>podSelector</span></label>
+									<select name="" id="">
+	       							<option value="">Labels</option>
+	       							<option value="">Labels</option>
+	       							<option value="">Labels</option>
+	       						</select>
+									<div class="btn-right">
+										<a class="icon"><img src="img/icon/plus.svg" alt=""></a>
+										<a class="icon"><img src="img/icon/cross.svg" alt=""></a>
+									</div>
+								</div>
+
+								<input type="text" class="role" placeholder="Role">
+								<input type="text" placeholder="frontend">
+
+								<div class="btn-right">
+									<a class="icon"><img src="img/icon/cross.svg" alt=""></a>
+								</div>
+
+							</div>
+						</div>
+						<div class="col-md-12 col-lg-6">
+							<div class="podSelector">
+								<div class="firstLine">
+									<label><span>podSelector</span></label>
+									<select name="" id="">
+	       							<option value="">Labels</option>
+	       							<option value="">Labels</option>
+	       							<option value="">Labels</option>
+	       						</select>
+									<div class="btn-right">
+										<a class="icon"><img src="img/icon/plus.svg" alt=""></a>
+										<a class="icon"><img src="img/icon/cross.svg" alt=""></a>
+									</div>
+								</div>
+
+								<input type="text" class="role" placeholder="Role">
+								<input type="text" placeholder="frontend">
+
+								<div class="btn-right">
+									<a class="icon"><img src="img/icon/cross.svg" alt=""></a>
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="from-area">
+							<div class="col-md-12">
+								<div class="col-md-12">
+									<div class="subtitle">
+										<span>PORT</span><a class="icon"><img src="img/icon/plus.svg" alt=""></a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+
+						<div class="col-md-12">
+							<div class="podSelector two">
+								<div class="row">
+									<div class="col-md-11">
+										<div class="row">
+											<div class="col-md-4">
+												<label>
+		       								<span>PORT</span><br>
+		       								<input type="text" placeholder="27017">
+		       							</label>
+											</div>
+											<div class="col-md-4">
+												<label>
+		       								<span>PROTOCOL</span><br>
+		       								<input type="text" placeholder="tcp">
+		       							</label>
+											</div>
+											<div class="col-md-4">
+												<label>
+		       								<span>APPLICATION PROTOCOL</span><br>
+		       								<input type="text" placeholder="mongo">
+		       							</label>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-1">
+										<br><br>
+										<div class="btn-right">
+
+											<a class="icon"><img src="img/icon/cross.svg" alt=""></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="from-area">
+							<div class="col-md-12">
+								<div class="col-md-12">
+									<div class="subtitle">
+										<span>Soft policy Options</span><a class="icon"><img src="img/icon/plus.svg" alt=""></a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+
+						<div class="col-md-12">
+							<div class="podSelector two">
+								<div class="row">
+									<div class="col-md-11">
+										<div class="row">
+											<div class="col-md-6">
+												<label>
+		       								<span>PORT</span><br>
+		       								<input type="text" placeholder="Max Connection">
+		       							</label>
+											</div>
+											<div class="col-md-6">
+												<label>
+		       								<span>PROTOCOL</span><br>
+		       								<input type="text" placeholder="120">
+		       							</label>
+											</div>
+
+										</div>
+									</div>
+									<div class="col-md-1">
+										<br><br>
+										<div class="btn-right">
+
+											<a class="icon"><img src="img/icon/cross.svg" alt=""></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="modal-top-buttons">
+								<button type="button" class="btn btn-md btn-alpha" id="save">SAVE</button>
+								<button type="button" class="btn btn-md btn-alpha" id="cancel">CANCEL</button>
+							</div>
+						</div>
+					</div>
+
+				</form>
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<section class="policies">
+		<div class="container">
+			<h1>ASSETS</h1>
+			<div class="row">
+				<div class="col-md-12 col-lg-3">
+					<div class="menu-page">
+						<ul>
+							<li id="btn-policies" class="active"><span>Policies</span></li>
+							<li id="btn-ingress"><span>Ingress</span></li>
+							<li id="btn-egress"><span>Egress</span></li>
+							<li id="btn-violation"><span>Violation History</span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-12 col-lg-9">
+					<article class="divTable">
+
+						<div id="table-1">
+							<h2>CLUSTER POLICIES</h2>
+							<div class="head-table">
+								<div class="row ">
+									<div class="col-md-6">
+										<a class="btn-ico-Down">ALL POLICIES</a>
+									</div>
+									<div class="col-md-6">
+										<div class="table-top-buttons">
+											<button type="button" class="btn btn-md btn-green">UPLOAD</button>
+											<button type="button" class="btn btn-md btn-alpha">CHOOSE FILE</button>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="neoScroll">
+								<table class="table table-hover">
+
+									<thead>
+										<tr>
+											<th><label class="box"><input type="checkbox"></label></th>
+											<th>POLICY ID</th>
+											<th>ACTIVE</th>
+											<th>TYPE</th>
+											<th>SLECTOR</th>
+											<th>DATE</th>
+											<th>VIOLATION</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<div class="neoScroll">
+											<tr>
+												<td><label class="box"><input type="checkbox"></div></td>
+						      	<td>cart-2836450845-32tz6</td>
+						        <td><input type="radio"></td>
+						        <td>MANUAL</td>
+								<td>cart-2836450845-32tz6</td>
+								<td>07/19/17 10:20</td>
+								<td><a href="#">-</a></td>
+						      </tr>
+
+						      <tr>
+						      	<td><label class="box"><input type="checkbox"></div></td>
+						      	<td>cart-db-2053818980-5h6lp</td>
+						        <td><input type="radio"></td>
+						        <td>AUTO</td>
+								<td>cart-db-2053818980-5h6lp</td>
+								<td>07/19/17 10:20</td>
+								<td><a href="#">-</a></td>
+						      </tr>
+
+						      <tr>
+						      	<td><label class="box"><input type="checkbox"></div></td>
+						      	<td>catalogue-3179692907-s986p</td>
+						        <td><input type="radio"></td>
+						        <td>AUTO</td>
+								<td>catalogue-3179692907-s986p</td>
+								<td>07/19/17 10:20</td>
+								<td><a href="#">-</a></td>
+						      </tr>
+
+						      <tr>
+						      	<td><label class="box"><input type="checkbox"></div></td>
+						      	<td>catalogue-db-2290683463-zq4kt</td>
+						        <td><input type="radio"></td>
+						        <td>AUTO</td>
+								<td>catalogue-db-2290683463-zq4kt</td>
+								<td>07/19/17 10:20</td>
+								<td><a href="#">-</a></td>
+						      </tr>
+
+						      <tr>
+						      	<td><label class="box"><input type="checkbox"></div></td>
+						      	<td>front-end-2489554388-77467</td>
+						        <td><input type="radio"></td>
+						        <td>AUTO</td>
+								<td>front-end-2489554388-77467</td>
+								<td>07/19/17 10:20</td>
+								<td><a href="#">-</a></td>
+						      </tr>
+
+						      <tr>
+						      	<td><label class="box"><input type="checkbox"></div></td>
+						      	<td>orders-3351236814-2lcdw</td>
+						        <td><input type="radio"></td>
+						        <td>AUTO</td>
+								<td>orders-3351236814-2lcdw</td>
+								<td>07/19/17 10:20</td>
+								<td><a href="#">-</a></td>
+						      </tr>
+
+						      <tr>
+						      	<td><label class="box"><input type="checkbox"></div></td>
+						      	<td>orders-db-3277638702-sj8xt</td>
+						        <td><input type="radio"></td>
+						        <td>AUTO</td>
+								<td>orders-db-3277638702-sj8xt</td>
+								<td>07/19/17 10:20</td>
+								<td><a href="#">-</a></td>
+						      </tr>
+
+						      <tr>
+						      	<td><label class="box"><input type="checkbox"></div></td>
+						      	<td>payment-1230586184-8pz0w</td>
+						        <td><input type="radio"></td>
+						        <td>AUTO</td>
+								<td>payment-1230586184-8pz0w</td>
+								<td>07/19/17 10:20</td>
+								<td><a href="#">-</a></td>
+						      </tr>
+
+						      <tr>
+						      	<td><label class="box"><input type="checkbox"></div></td>
+						      	<td>queue-master-1271843919-cd0t8</td>
+						        <td><input type="radio"></td>
+						        <td>AUTO</td>
+								<td>queue-master-1271843919-cd0t8</td>
+								<td>07/19/17 10:20</td>
+								<td><a href="#">-</a></td>
+						      </tr>
+
+						      <tr>
+						      	<td><label class="box"><input type="checkbox"></div></td>
+						      	<td>rabbitmq-3472039365-j7jr4</td>
+						        <td><input type="radio"></td>
+						        <td>AUTO</td>
+								<td>rabbitmq-3472039365-j7jr4</td>
+								<td>07/19/17 10:20</td>
+								<td><a href="#">-</a></td>
+						      </tr>
+
+						      <tr>
+						      	<td><label class="box"><input type="checkbox"></div></td>
+						      	<td>shipping-1008325448-phlpt</td>
+						        <td><input type="radio"></td>
+						        <td>AUTO</td>
+								<td>shipping-1008325448-phlpt</td>
+								<td>07/19/17 10:20</td>
+								<td><a href="#">-</a></td>
+						      </tr>
+
+						      <tr>
+						      	<td><label class="box"><input type="checkbox"></div></td>
+						      	<td>cart-2836450845-32tz6</td>
+						        <td><input type="radio"></td>
+						        <td>AUTO</td>
+								<td>cart-2836450845-32tz6</td>
+								<td>07/19/17 10:20</td>
+								<td><a href="#">-</a></td>
+						      </tr>
+
+						      <tr>
+						      	<td><label class="box"><input type="checkbox"></div></td>
+						      	<td>user-937712604-8dh7h</td>
+						        <td><input type="radio"></td>
+						        <td>AUTO</td>
+								<td>user-937712604-8dh7h</td>
+								<td>07/19/17 10:20</td>
+								<td><a href="#">-</a></td>
+						      </tr>
+
+
+
+
+
+						  		</div>
+						    </tbody>
+
+  						</table>
+  						</div>
+  						</div>
+
+
+
+			 		</article>
+			 	</div>
+			 </div>
+		</div>
+	</section>
+
+
+	<footer>
+		<div class="container">
+			<h3>Copyright © 2017 SmartOrbis, All rights reserved.</h3>
+		</div>
+	</footer>
+
+
+<script src="libs/jquery/jquery-3.2.1.js"></script>
+<script src="libs/popper/popper.js"></script>
+<script src="libs/bootstrap/js/bootstrap.js"></script>
+
+<script src="js/script.js"></script>
+<script>$('.modal').addClass('animated fadeIn').show();</script>
+</body>
+
+</html>
