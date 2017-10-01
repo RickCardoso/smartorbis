@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <title></title>
+    <title>Dashboard | SmartOrbis</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="res/css/style.css" type="text/css" media="all" />
@@ -99,58 +99,341 @@
       <div class="app-wrap">
 
         <div class="row">
-          <div class="threats-col">
-            <h1 class="activity-title">Violations &amp; Threats</h1>
-            <div class="activity-content">
-              <div class="violations">
-                <div class="marker red">
-                  <span>12</span>
-                </div>
-                <div class="chart-wrap">
-                  <h2 class="chart-title">Violations</h2>
-                  <div class="chart-box">
+          <div class="main-col">
 
+            <div class="row">
+
+              <div class="threats-col">
+                <h1 class="activity-title">Violations &amp; Threats</h1>
+                <div class="activity-content">
+                  <div class="violations">
+                    <div class="marker red">
+                      <span>12</span>
+                    </div>
+                    <div class="chart-wrap">
+                      <h2 class="chart-title">Violations</h2>
+                      <div class="chart-box">
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="soft-violations">
+                    <div class="marker yellow">
+                      <span>6</span>
+                    </div>
+                    <div class="chart-wrap">
+                      <h2 class="chart-title">Soft Violations</h2>
+                      <div class="chart-box">
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="behavior-anomalies">
+                    <div class="marker blue">
+                      <span>3</span>
+                    </div>
+                    <div class="chart-wrap">
+                      <h2 class="chart-title">Behavior Anomalies</h2>
+                      <div class="chart-box">
+
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="soft-violations">
-                <div class="marker yellow">
-                  <span>6</span>
-                </div>
-                <div class="chart-wrap">
-                  <h2 class="chart-title">Soft Violations</h2>
-                  <div class="chart-box">
+              </div><!-- .threats-col -->
 
-                  </div>
+              <div class="clusters-col">
+                <h1 class="activity-title">Clusters</h1>
+                <select class="custom-select select-std">
+                  <option value="kubernets" selected>Kubernets</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                  <span class="host-icon"><i class="fa fa-triangle fa-rotate-180"></i></span>
+                </select>
+                <div class="marker">
+                  <span>20</span>
                 </div>
-              </div>
-              <div class="behavior-anomalies">
-                <div class="marker blue">
+                <div class="marker">
                   <span>3</span>
                 </div>
-                <div class="chart-wrap">
-                  <h2 class="chart-title">Behavior Anomalies</h2>
-                  <div class="chart-box">
+                <div class="marker">
+                  <span>16</span>
+                </div>
+                <div class="marker">
+                  <span>4</span>
+                </div>
+                <div class="marker">
+                  <span>3</span>
+                </div>
+                <div class="marker big">
+                  <span>90<span class="small">%</span></span>
+                </div>
+              </div><!-- .clusters-col -->
+            </div>
 
+            <div class="row">
+              <div class="col-4">
+                <div class="chart-head">
+                  <h1>Hosts</h1>
+                  <div class="btn-container">
+                    <a href="#">
+                      <img src="" alt="">
+                    </a>
+                    <a href="#">
+                      <img src="" alt="">
+                    </a>
                   </div>
                 </div>
               </div>
-            </div>
+              <div class="col-4">
+                <div class="chart-head">
+                  <h1>Violation Categories</h1>
+                  <div class="btn-container">
+                    <div class="interval-note">
+                      <span>Last 24 hrs</span>
+                    </div>
+                    <a href="#">
+                      <img src="" alt="">
+                    </a>
+                    <a href="#">
+                      <img src="" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="chart-head">
+                  <h1>Soft Violations Type</h1>
+                  <div class="btn-container">
+                    <div class="interval-note">
+                      <span>Last 24 hrs</span>
+                    </div>
+                    <a href="#">
+                      <img src="" alt="">
+                    </a>
+                    <a href="#">
+                      <img src="" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div><!-- CHARTS -->
+
           </div>
-          <div class="clusters-col">
-            <h1 class="activity-title">Clusters</h1>
+
+          <div class="aside-col">
+            <aside class="live-feed">
+              <div class="feed-header">
+                <h1 class="feed-title">Live Feed</h1>
+                <div class="btn-wrap">
+                  <a href="#">
+                    <img src="" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="feed-content">
+                <table>
+                  <tbody>
+                    <tr class="active">
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr class="active">
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr class="active">
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr class="active">
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr class="active">
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr class="active">
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr class="active">
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr class="active">
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr class="active">
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr class="active">
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr class="active">
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr class="active">
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr class="active">
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr class="active">
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr class="active">
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr class="active">
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr class="active">
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr>
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr>
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr>
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr>
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr>
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr>
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr>
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr>
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr>
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr>
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr>
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr>
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr>
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr>
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr>
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr>
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr>
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr>
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr>
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                    <tr>
+                      <td>Pod suspected for soft violation</td>
+                      <td></td>
+                      <td>10.244.5.2</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </aside><!-- .live-feed -->
           </div>
+
         </div>
-        <div class="row">
 
       </div>
+
     </main><!-- .app-main -->
-
-      <aside class="live-feed">
-
-      </aside><!-- .live-feed -->
-
-    </div>
 
     <footer class="app-footer">
       <div class="app-wrap">

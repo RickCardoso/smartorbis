@@ -6314,6 +6314,29 @@ body {
   .marker.blue {
     border-color: #61cfb2; }
 
+.select-std {
+  background: transparent;
+  border: none;
+  color: #12ffcd; }
+
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.2); }
+
+*::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent; }
+
+*::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #12ffcd; }
+
 .app-navbar {
   min-height: 65px;
   position: relative;
@@ -6490,5 +6513,9 @@ body {
   padding-left: 15px;
   flex: 0 0 67.91045%;
   max-width: 67.91045%; }
+
+.feed-content {
+  overflow-y: scroll;
+  max-height: 400px; }
 
 /*# sourceMappingURL=style.css.map */
