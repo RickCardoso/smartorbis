@@ -4,7 +4,7 @@
   @include crossBorder(50%);
   width: 57px;
   height: 57px;
-  & span {
+  & span.marker-inner {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,25 +29,41 @@
 .select-std {
   background: transparent;
   border: none;
-  color: #12ffcd; // TODO
+  color: #61cfb2;
+  margin-left: -5px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.btn-icon {
+  padding: 5px;
+  fill: #61cfb2;
+  text-decoration: none;
+  display: flex;
+  &:hover,
+  &:focus,
+  &:active {
+    fill: #fff;
+    text-decoration: none;
+  }
 }
 
 *::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  @include crossBorder(3px);
+  @include crossBorder(2px);
 	background-color: rgba(0, 0, 0, 0.2);
 }
 
 *::-webkit-scrollbar
 {
-	width: 12px;
+	width: 19px;
   background-color: transparent;
 }
 
 *::-webkit-scrollbar-thumb
 {
-  @include crossBorder(3px);
+  @include crossBorder(2px);
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #12ffcd;
 }
