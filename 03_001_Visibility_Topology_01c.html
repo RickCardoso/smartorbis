@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <title></title>
+    <title>Visibility | SmartOrbis</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="res/css/style.css" type="text/css" media="all" />
@@ -10,7 +10,194 @@
 
   <body>
 
+    <svg style="display:none;">
+      <symbol id="dashboard-icon" viewBox="0 0 18.625 18.531">
+        <path d="M17.449,18.519 L1.159,18.519 C0.513,18.519 -0.009,17.999 -0.009,17.357 L-0.009,1.158 C-0.009,0.517 0.513,-0.004 1.159,-0.004 L17.449,-0.004 C18.094,-0.004 18.617,0.517 18.617,1.158 L18.617,17.357 C18.617,17.999 18.094,18.519 17.449,18.519 ZM6.934,16.195 L16.280,16.195 L16.280,6.901 L6.934,6.901 L6.934,16.195 ZM4.598,16.195 L4.598,6.901 L2.327,6.901 L2.327,16.195 L4.598,16.195 ZM2.327,2.320 L2.327,4.578 L16.280,4.578 L16.280,2.320 L2.327,2.320 Z" class="cls-1"/>
+      </symbol>
+      <symbol id="visibility-icon" viewBox="0 0 18.625 18.531">
+        <path d="M1.175,0.006 C0.533,0.006 0.011,0.524 0.011,1.163 L0.011,11.580 L0.011,13.895 C0.011,14.534 0.533,15.052 1.175,15.052 L6.995,15.052 L5.831,17.367 L5.831,17.367 L5.831,18.524 L12.814,18.524 L12.814,17.367 L12.814,17.367 L11.651,15.052 L17.470,15.052 C18.113,15.052 18.634,14.534 18.634,13.895 L18.634,11.580 L18.634,1.163 C18.634,0.524 18.113,0.006 17.470,0.006 L1.175,0.006 ZM2.339,10.423 L2.339,2.321 L16.306,2.321 L16.306,10.423 L2.339,10.423 Z" class="cls-1"/>
+      </symbol>
+      <symbol id="policies-icon" viewBox="0 0 17.469 22">
+        <path d="M17.432,3.437 C13.834,3.437 11.077,2.365 8.746,-0.000 C6.415,2.365 3.659,3.437 0.061,3.437 C0.061,9.596 -1.160,18.417 8.746,22.000 C18.653,18.417 17.432,9.596 17.432,3.437 ZM8.027,14.274 L5.133,11.255 L6.429,9.903 L8.027,11.571 L11.064,8.402 L12.359,9.753 L8.027,14.274 Z" class="cls-1"/>
+      </symbol>
+      <symbol id="threats-icon" viewBox="0 0 17.469 22">
+        <path d="M8.752,22.000 C-1.154,18.417 0.067,9.596 0.067,3.437 C3.665,3.437 6.422,2.365 8.752,-0.000 C11.083,2.365 13.840,3.437 17.438,3.437 C17.438,9.596 18.660,18.417 8.752,22.000 ZM7.006,5.789 L8.171,12.737 L9.335,12.737 L10.499,5.789 L7.006,5.789 ZM10.499,15.053 L7.006,15.053 L7.006,18.526 L10.499,18.526 L10.499,15.053 Z" class="cls-1"/>
+      </symbol>
+      <symbol id="assets-icon" viewBox="0 0 16.281 16.219">
+        <path d="M11.642,6.954 L11.642,4.638 L16.297,4.638 L16.297,6.954 L11.642,6.954 ZM12.806,0.005 L15.133,0.005 L15.133,3.480 L12.806,3.480 L12.806,0.005 ZM5.824,10.429 L10.478,10.429 L10.478,12.745 L5.824,12.745 L5.824,10.429 ZM6.987,0.005 L9.315,0.005 L9.315,9.270 L6.987,9.270 L6.987,0.005 ZM0.006,3.480 L4.660,3.480 L4.660,5.796 L0.006,5.796 L0.006,3.480 ZM1.169,0.005 L3.497,0.005 L3.497,2.322 L1.169,2.322 L1.169,0.005 ZM3.497,16.219 L1.169,16.219 L1.169,6.954 L3.497,6.954 L3.497,16.219 ZM9.315,16.219 L6.987,16.219 L6.987,13.903 L9.315,13.903 L9.315,16.219 ZM15.133,16.219 L12.806,16.219 L12.806,8.112 L15.133,8.112 L15.133,16.219 Z" class="cls-1"/>
+      </symbol>
+      <symbol id="search-icon" viewBox="0 0 23 23">
+        <path d="M19.779,19.792 C19.641,19.931 19.459,20.000 19.279,20.000 C19.098,20.000 18.917,19.931 18.778,19.792 L13.327,14.334 C12.238,15.206 10.876,15.750 9.376,15.750 C5.866,15.750 3.010,12.890 3.010,9.376 C3.010,5.860 5.866,3.000 9.376,3.000 C12.886,3.000 15.742,5.860 15.742,9.376 C15.742,10.877 15.199,12.241 14.328,13.332 L19.779,18.791 C20.055,19.068 20.055,19.516 19.779,19.792 ZM9.376,4.417 C6.645,4.417 4.424,6.641 4.424,9.376 C4.424,12.109 6.645,14.333 9.376,14.333 C12.106,14.333 14.327,12.109 14.327,9.376 C14.327,6.641 12.106,4.417 9.376,4.417 Z" class="cls-1"/>
+      </symbol>
+      <symbol id="notifications-icon" viewBox="0 0 23 25">
+        <path d="M14.944,18.196 L13.801,18.196 L11.515,18.196 L9.229,18.196 L8.086,18.196 L3.514,18.196 L3.514,17.395 C3.514,16.746 3.905,16.208 4.437,15.835 C5.704,14.947 5.721,11.054 6.091,8.836 C6.427,6.825 7.943,5.853 9.207,5.664 L9.229,5.664 L9.229,5.641 C9.229,4.395 10.243,3.385 11.493,3.385 L11.538,3.385 C12.788,3.385 13.801,4.395 13.801,5.641 L13.801,5.664 L13.824,5.664 C15.087,5.853 16.603,6.825 16.939,8.836 C17.310,11.054 17.326,14.947 18.593,15.835 C19.126,16.208 19.517,16.746 19.517,17.395 L19.517,18.196 L14.944,18.196 ZM11.515,21.614 C10.253,21.614 9.229,20.594 9.229,19.336 L13.801,19.336 C13.801,20.594 12.778,21.614 11.515,21.614 Z" class="cls-1"/>
+      </symbol>
+      <symbol id="settings-icon" viewBox="0 0 25 25">
+        <path d="M21.006,11.313 L19.094,11.074 C18.921,10.267 18.602,9.516 18.168,8.845 L19.352,7.322 C19.527,7.098 19.507,6.779 19.306,6.579 L18.417,5.690 C18.217,5.489 17.899,5.469 17.675,5.644 L16.151,6.828 C15.480,6.395 14.728,6.075 13.923,5.902 L13.683,3.990 C13.648,3.708 13.408,3.497 13.125,3.497 L11.868,3.497 C11.584,3.497 11.345,3.708 11.310,3.990 L11.070,5.902 C10.265,6.075 9.513,6.395 8.842,6.828 L7.318,5.644 C7.094,5.469 6.776,5.489 6.576,5.690 L5.686,6.579 C5.485,6.779 5.466,7.098 5.640,7.322 L6.825,8.845 C6.391,9.516 6.072,10.267 5.899,11.074 L3.988,11.313 C3.705,11.348 3.494,11.588 3.494,11.871 L3.494,13.128 C3.494,13.412 3.705,13.651 3.988,13.686 L5.899,13.925 C6.072,14.732 6.391,15.483 6.825,16.154 L5.640,17.677 C5.466,17.901 5.485,18.220 5.686,18.421 L6.576,19.310 C6.776,19.510 7.094,19.530 7.318,19.356 L8.842,18.171 C9.513,18.605 10.265,18.924 11.070,19.097 L11.310,21.009 C11.345,21.290 11.584,21.502 11.868,21.502 L13.125,21.502 C13.408,21.502 13.648,21.290 13.683,21.009 L13.923,19.097 C14.728,18.924 15.480,18.605 16.151,18.171 L17.675,19.356 C17.899,19.530 18.217,19.510 18.417,19.310 L19.306,18.421 C19.507,18.220 19.527,17.901 19.352,17.677 L18.168,16.154 C18.602,15.483 18.921,14.732 19.094,13.925 L21.006,13.686 C21.288,13.651 21.499,13.412 21.499,13.128 L21.499,11.871 C21.499,11.588 21.288,11.348 21.006,11.313 ZM12.496,14.750 C11.254,14.750 10.246,13.743 10.246,12.500 C10.246,11.257 11.254,10.249 12.496,10.249 C13.739,10.249 14.747,11.257 14.747,12.500 C14.747,13.743 13.739,14.750 12.496,14.750 Z" class="cls-1"/>
+      </symbol>
+    </svg><!-- svg sprites -->
 
+    <header class="app-header">
+      <div class="app-wrap">
+        <div class="row justify-content-between">
+
+          <nav class="navbar navbar-expand-lg app-navbar">
+            <a class="navbar-brand app-brand" href="#"><img src="res/img/logo.svg" alt="" width="125"></a>
+            <button class="navbar-toggler app-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link app-nav-link active" href="#"><svg class="icon"><use xlink:href="#dashboard-icon"></use></svg> Dashboard <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link app-nav-link" href="#"><svg class="icon"><use xlink:href="#visibility-icon"></use></svg> Visibility</a>
+                <a class="nav-item nav-link app-nav-link" href="#"><svg class="icon"><use xlink:href="#policies-icon"></use></svg> Policies</a>
+                <a class="nav-item nav-link app-nav-link" href="#"><svg class="icon"><use xlink:href="#threats-icon"></use></svg> Threats</a>
+                <a class="nav-item nav-link app-nav-link" href="#"><svg class="icon"><use xlink:href="#assets-icon"></use></svg> Assets</a>
+              </div>
+            </div>
+          </nav><!-- .app-navbar -->
+
+          <nav class="navbar navbar-expand-lg user-navbar">
+            <div class="navbar-nav user-navbar-nav">
+              <div class="btn-group">
+                <a class="nav-link user-nav-link" href="#" id="hostDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Hosts <span class="host-icon"><i class="fa fa-triangle fa-rotate-180"></i></span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="hostDropDown">
+                  <a class="dropdown-item" href="#">Option 1</a>
+                  <a class="dropdown-item" href="#">Option 2</a>
+                  <a class="dropdown-item" href="#">Option 3</a>
+                </div>
+              </div>
+              <a class="nav-item nav-link user-nav-link" href="#"><svg class="icon"><use xlink:href="#search-icon"></use></svg></a>
+              <a class="nav-item nav-link user-nav-link" href="#">
+                <span class="fa-layers fa-fw">
+                  <svg class="icon"><use xlink:href="#notifications-icon"></use></svg>
+                  <span class="fa-layers-counter fa-layers-top-left app-notification"></span>
+                </span>
+              </a>
+              <a class="nav-item nav-link user-nav-link" href="#"><svg class="icon"><use xlink:href="#settings-icon"></use></svg></a>
+              <div class="btn-group">
+                <a class="nav-link user-nav-link" href="#" id="userDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img class="avatar-img" src="res/img/header/avatar.png" alt="">
+                  <span class="avatar-icon"><i class="fa fa-chevron-down"></i></span>
+                </a>
+                <div class="dropdown-menu user-dropdown-menu" aria-labelledby="userDropDown">
+                  <a class="dropdown-item" href="#">Option 1</a>
+                  <a class="dropdown-item" href="#">Option 2</a>
+                  <a class="dropdown-item" href="#">Option 3</a>
+                </div>
+              </div>
+            </div>
+          </nav><!-- .user-navbar -->
+
+        </div>
+      </div>
+    </header><!-- .app-header -->
+
+    <main class="app-main">
+      <div class="app-wrap">
+
+        <h1 class="page-title">Visibility</h1>
+
+        <aside class="activity-menu">
+          <div class="activity-btn-container">
+            <div class="marker">
+
+            </div>
+            <div class="btn-title-container">
+              <span>Network Topology View</span>
+            </div>
+          </div>
+          <div class="activity-btn-container">
+            <div class="marker">
+
+            </div>
+            <div class="btn-title-container">
+              <span>Traffic View</span>
+            </div>
+          </div>
+          <div class="activity-btn-container">
+            <div class="marker">
+
+            </div>
+            <div class="btn-title-container">
+              <span>Traffic Between Pods</span>
+            </div>
+          </div>
+          <div class="activity-btn-container">
+            <div class="marker">
+
+            </div>
+            <div class="btn-title-container">
+              <span>Network Audit</span>
+            </div>
+          </div>
+        </aside>
+
+        <div class="topology-container">
+          <div class="topology-item">
+            <span class="fa-layers fa-fw">
+              <svg class="icon"><use xlink:href="#notifications-icon"></use></svg>
+              <span class="fa-layers-counter fa-layers-top-left app-notification"></span>
+            </span>
+          </div>
+          <div class="topology-item">
+            <span class="fa-layers fa-fw">
+              <svg class="icon"><use xlink:href="#notifications-icon"></use></svg>
+              <span class="fa-layers-counter fa-layers-top-left app-notification"></span>
+            </span>
+          </div>
+          <div class="topology-item">
+            <img src="" alt="">
+          </div>
+          <div class="topology-item">
+            <img src="" alt="">
+          </div>
+          <div class="topology-item">
+            <img src="" alt="">
+          </div>
+        </div>
+
+        <div class="asset-detail-container">
+          <div class="asset-parameters">
+            <h1>IP:</h1>
+            <p>10.244.6.19</p>
+            <h1>Name:</h1>
+            <p>cart-2836450845-32tz6</p>
+            <h1>Host:</h1>
+            <p>172.31.56.123</p>
+            <h1>App:</h1>
+            <p>sock-shop</p>
+            <h1>Time:</h1>
+            <p>2017-03-05T09:41:14Z</p>
+          </div>
+          <div class="traffic-parameters">
+            <h1>Data Traffic:</h1>
+            <div class="upload-block">
+              <img src="" alt="">
+              <span class="ip">10.244.5.19</span>
+              <span class="upload-speed">666.24 KB</span>
+              <span class="ip">10.244.5.19</span>
+            </div>
+            <div class="download-block">
+              <img src="" alt="">
+              <span class="ip">10.244.5.19</span>
+              <span class="download-speed">611.58 KB</span>
+              <span class="ip">10.244.5.19</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </main><!-- .app-main -->
+
+    <footer class="app-footer">
+      <div class="app-wrap">
+        <p>Copyright &copy; 2017 SmartOrbis, All rights reserved.</p>
+      </div>
+    </footer><!-- .app-footer -->
 
   </body>
 
