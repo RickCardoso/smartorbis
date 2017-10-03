@@ -69,26 +69,47 @@
                 <a class="nav-link user-nav-link" href="#" id="hostDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Hosts <span class="host-icon"><i class="fa fa-triangle fa-rotate-180"></i></span>
                 </a>
-                <div class="dropdown-menu" aria-labelledby="hostDropDown">
+                <div class="dropdown-menu dropdown-box" aria-labelledby="hostDropDown">
                   <a class="dropdown-item" href="#">Option 1</a>
                   <a class="dropdown-item" href="#">Option 2</a>
                   <a class="dropdown-item" href="#">Option 3</a>
                 </div>
               </div>
-              <a class="nav-item nav-link user-nav-link" href="#"><svg class="icon"><use xlink:href="#search-icon"></use></svg></a>
-              <a class="nav-item nav-link user-nav-link" href="#">
-                <span class="fa-layers fa-fw">
-                  <svg class="icon"><use xlink:href="#notifications-icon"></use></svg>
-                  <span class="fa-layers-counter fa-layers-top-left app-notification"></span>
-                </span>
-              </a>
+              <div class="btn-group">
+                <a class="nav-item nav-link user-nav-link" href="#"><svg class="icon"><use xlink:href="#search-icon"></use></svg></a>
+              </div>
+              <div class="btn-group">
+                <a class="nav-item nav-link user-nav-link" href="#" id="notificationDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="fa-layers fa-fw">
+                    <svg class="icon"><use xlink:href="#notifications-icon"></use></svg>
+                    <span class="fa-layers-counter fa-layers-top-left app-notification"></span>
+                  </span>
+                </a>
+                <div class="dropdown-menu dropdown-box notification-menu" aria-labelledby="notificationDropDown">
+                  <div class="notification-container">
+											<div class="notification-head">
+												<span>NOTIFICATIONS</span>
+												<i class="fa fa-check-square-o"></i>
+											</div>
+											<div class="notification-row">
+												<div class="notification-icon">
+												</div>
+												<div class="notification-data">
+													<p class="notification-ip">10.244.5.2</p>
+													<p class="notification-content">Pod Status is Updated</p>
+												</div>
+												<span class="notification-status">Pod Status Update</span>
+											</div>
+										</div>
+                </div>
+              </div>
               <a class="nav-item nav-link user-nav-link" href="#"><svg class="icon"><use xlink:href="#settings-icon"></use></svg></a>
               <div class="btn-group">
                 <a class="nav-link user-nav-link" href="#" id="userDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <img class="avatar-img" src="res/img/header/avatar.png" alt="">
                   <span class="avatar-icon"><i class="fa fa-chevron-down"></i></span>
                 </a>
-                <div class="dropdown-menu user-dropdown-menu" aria-labelledby="userDropDown">
+                <div class="dropdown-menu dropdown-box user-dropdown-menu" aria-labelledby="userDropDown">
                   <a class="dropdown-item" href="#">Option 1</a>
                   <a class="dropdown-item" href="#">Option 2</a>
                   <a class="dropdown-item" href="#">Option 3</a>
@@ -254,7 +275,7 @@
 
           <div class="col-12 col-sm-6 d-xl-none">
             <div class="row">
-              <div class="col-12">
+              <div class="col-12 pt-4">
                 <div class="chart-head">
                   <h1>Hosts</h1>
                   <div class="btn-container">
@@ -270,7 +291,7 @@
                   <img class="img-fluid" src="res/img/examples/graph-hosts.png" alt="">
                 </div>
               </div>
-              <div class="col-12">
+              <div class="col-12 pt-4">
                 <div class="chart-head">
                   <h1>Violation Categories</h1>
                   <div class="btn-container">
@@ -289,7 +310,7 @@
                   <img class="img-fluid" src="res/img/examples/graph-violation.png" alt="">
                 </div>
               </div>
-              <div class="col-12">
+              <div class="col-12 pt-4 pb-3">
                 <div class="chart-head">
                   <h1>Soft Violations Type</h1>
                   <div class="btn-container">

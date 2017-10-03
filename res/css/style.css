@@ -6355,6 +6355,22 @@ body {
     fill: #fff;
     text-decoration: none; }
 
+.dropdown-box {
+  background: #09224a; }
+  .dropdown-box .dropdown-item {
+    border-bottom: 1px solid #032763;
+    background: #032e74;
+    color: #fff; }
+    .dropdown-box .dropdown-item:first-of-type {
+      border-top: 1px solid #032763; }
+    .dropdown-box .dropdown-item:hover, .dropdown-box .dropdown-item:focus {
+      background: #09224a;
+      color: #61cfb2; }
+
+option {
+  background: #09224a;
+  color: #ccc; }
+
 *::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   -webkit-border-radius: 2px;
@@ -6372,6 +6388,82 @@ body {
   border-radius: 2px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #12ffcd; }
+
+.notification-menu {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 300px;
+  padding: 0 0 8px; }
+
+.notification-head {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #09224a;
+  padding: 8px;
+  color: #fff; }
+  .notification-head i {
+    position: absolute;
+    top: 12px;
+    right: 8px; }
+
+.notification-row, .notification-box {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #09224a;
+  padding: 8px; }
+  .notification-row:hover, .notification-box:hover {
+    background: #09224a; }
+    .notification-row:hover .notification-icon, .notification-box:hover .notification-icon {
+      border-color: #032e74; }
+
+.notification-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #032e74;
+  border: 1px solid #09224a;
+  border-top: 3px solid #fff;
+  border-radius: 0 0 5px 5px;
+  width: 300px;
+  opacity: 1;
+  z-index: 9999;
+  transition: all .3s; }
+  .notification-box:hover {
+    border-color: #032e74; }
+
+.notification-icon {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #09224a;
+  border-radius: 3px; }
+
+.notification-data {
+  flex: 1;
+  padding: 0 8px; }
+  .notification-data p {
+    margin: 0;
+    font-size: 14px; }
+    .notification-data p.notification-ip {
+      font-weight: 600;
+      color: #12ffcd; }
+    .notification-data p.notification-content {
+      font-weight: 400; }
+
+.notification-status {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 10px;
+  color: rgba(200, 200, 200, 0.5);
+  text-shadow: 1px 1px 1px #032763; }
 
 .app-navbar {
   min-height: 65px;
@@ -6524,6 +6616,9 @@ body {
   color: #e7e7e7;
   font-size: 0.95em;
   text-transform: uppercase; }
+  @media (max-width: 767px) {
+    .activity-title {
+      margin-top: 40px; } }
 
 .main-col {
   position: relative;
@@ -6565,6 +6660,14 @@ body {
   max-width: 32.08955%;
   flex: 0 0 430px;
   max-width: 430px; }
+  @media (max-width: 1199px) {
+    .threats-col {
+      flex: 0 0 50%;
+      max-width: 50%; } }
+  @media (max-width: 767px) {
+    .threats-col {
+      flex: 0 0 100%;
+      max-width: 100%; } }
   .threats-col .activity-content {
     max-width: 312px;
     padding-top: 15px; }
@@ -6604,7 +6707,13 @@ body {
   flex: 1 1 auto; }
   @media (max-width: 1199px) {
     .clusters-col {
-      flex: 1; } }
+      flex: 0 0 50%;
+      max-width: 50%; } }
+  @media (max-width: 767px) {
+    .clusters-col {
+      flex: 0 0 100%;
+      max-width: 100%;
+      min-height: 400px; } }
   .clusters-col .marker.big {
     position: absolute;
     bottom: 12px;
@@ -6619,6 +6728,10 @@ body {
     @media (max-width: 1199px) {
       .clusters-col .marker.big {
         left: 50%; } }
+    @media (max-width: 575px) {
+      .clusters-col .marker.big {
+        width: 181px;
+        height: 181px; } }
     .clusters-col .marker.big span.marker-inner {
       margin: 10%;
       width: 80%;
@@ -6645,14 +6758,31 @@ body {
       -ms-transform: translateX(-208.5px);
       -o-transform: translateX(-208.5px);
       transform: translateX(-208.5px); }
+      @media (max-width: 575px) {
+        .clusters-col .marker-box:nth-of-type(1), .clusters-col .marker-box:nth-of-type(2) {
+          -webkit-transform: translateX(-178.5px);
+          -moz-transform: translateX(-178.5px);
+          -ms-transform: translateX(-178.5px);
+          -o-transform: translateX(-178.5px);
+          transform: translateX(-178.5px); } }
     .clusters-col .marker-box:nth-of-type(4), .clusters-col .marker-box:nth-of-type(5) {
       -webkit-transform: translateX(120.5px);
       -moz-transform: translateX(120.5px);
       -ms-transform: translateX(120.5px);
       -o-transform: translateX(120.5px);
       transform: translateX(120.5px); }
+      @media (max-width: 575px) {
+        .clusters-col .marker-box:nth-of-type(4), .clusters-col .marker-box:nth-of-type(5) {
+          -webkit-transform: translateX(90.5px);
+          -moz-transform: translateX(90.5px);
+          -ms-transform: translateX(90.5px);
+          -o-transform: translateX(90.5px);
+          transform: translateX(90.5px); } }
     .clusters-col .marker-box:nth-of-type(2), .clusters-col .marker-box:nth-of-type(4) {
       top: 108px; }
+      @media (max-width: 575px) {
+        .clusters-col .marker-box:nth-of-type(2), .clusters-col .marker-box:nth-of-type(4) {
+          top: 151px; } }
     .clusters-col .marker-box:nth-of-type(3) {
       top: 18px;
       -webkit-transform: translateX(-40px);
@@ -6660,6 +6790,9 @@ body {
       -ms-transform: translateX(-40px);
       -o-transform: translateX(-40px);
       transform: translateX(-40px); }
+      @media (max-width: 575px) {
+        .clusters-col .marker-box:nth-of-type(3) {
+          top: 82px; } }
     .clusters-col .marker-box:nth-of-type(1), .clusters-col .marker-box:nth-of-type(5) {
       bottom: 12px; }
 
@@ -6763,6 +6896,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll; }
+  @media (max-width: 1199px) {
+    .feed-content {
+      max-height: 860px; } }
   .feed-content table {
     width: 100%; }
     .feed-content table tbody tr {

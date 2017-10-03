@@ -24,6 +24,12 @@
   @include make-col(430, 1340);
   flex: 0 0 430px;
   max-width: 430px;
+  @include media-breakpoint-down(lg) {
+    @include make-col(1, 2);
+  }
+  @include media-breakpoint-down(sm) {
+    @include make-col(1, 1);
+  }
   & .activity-content {
     max-width: 312px;
     padding-top: 15px;
@@ -66,7 +72,11 @@
   @include make-col-ready();
   flex: 1 1 auto;
   @include media-breakpoint-down(lg) {
-    flex: 1;
+    @include make-col(1, 2);
+  }
+  @include media-breakpoint-down(sm) {
+    @include make-col(1, 1);
+    min-height: 400px;
   }
   & .marker.big {
     position: absolute;
@@ -77,6 +87,10 @@
     height: 241px;
     @include media-breakpoint-down(lg) {
       left: 50%;
+    }
+    @include media-breakpoint-down(xs) {
+      width: 181px;
+      height: 181px;
     }
     & span.marker-inner {
       margin: 10%;
@@ -102,18 +116,30 @@
     &:nth-of-type(1),
     &:nth-of-type(2) {
       @include crossTransform(translateX(-208.5px));
+      @include media-breakpoint-down(xs) {
+        @include crossTransform(translateX(-178.5px));
+      }
     }
     &:nth-of-type(4),
     &:nth-of-type(5) {
       @include crossTransform(translateX(120.5px));
+      @include media-breakpoint-down(xs) {
+        @include crossTransform(translateX(90.5px));
+      }
     }
     &:nth-of-type(2),
     &:nth-of-type(4) {
       top: 108px;
+      @include media-breakpoint-down(xs) {
+        top: 151px;
+      }
     }
     &:nth-of-type(3) {
       top: 18px;
       @include crossTransform(translateX(-40px));
+      @include media-breakpoint-down(xs) {
+        top: 82px;
+      }
     }
     &:nth-of-type(1),
     &:nth-of-type(5) {
@@ -239,6 +265,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
+  @include media-breakpoint-down(lg) {
+    max-height: 860px;
+  }
   & table {
     width: 100%;
     & tbody {

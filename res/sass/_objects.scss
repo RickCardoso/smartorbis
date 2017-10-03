@@ -48,6 +48,28 @@
   }
 }
 
+.dropdown-box {
+  background: #09224a;
+  & .dropdown-item {
+    &:first-of-type {
+      border-top: 1px solid #032763;
+    }
+    border-bottom: 1px solid #032763;
+    background: #032e74;
+    color: #fff;
+    &:hover,
+    &:focus {
+      background: #09224a;
+      color: #61cfb2;
+    }
+  }
+}
+
+option {
+  background: #09224a;
+  color: #ccc;
+}
+
 *::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -66,4 +88,92 @@
   @include crossBorder(2px);
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #12ffcd;
+}
+
+// notifications
+.notification-menu {
+  left: 50%;
+	@include crossTransform(translateX(-50%));
+	width: 300px;
+	padding: 0 0 8px;
+}
+
+.notification-head {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid #09224a;
+	padding: 8px;
+  color: #fff;
+	& i {
+		position: absolute;
+		top: 12px;
+		right: 8px;
+	}
+}
+
+.notification-row {
+	position: relative;
+	display: flex;
+	flex-flow: row;
+	justify-content: flex-start;
+	align-items: center;
+	border-bottom: 1px solid #09224a;
+	padding: 8px;
+	&:hover {
+		background: #09224a;
+		.notification-icon {
+			border-color: #032e74;
+		}
+	}
+}
+
+.notification-box {
+	@extend .notification-row;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background: #032e74;
+	border: 1px solid #09224a;
+	border-top: 3px solid #fff;
+	border-radius: 0 0 5px 5px;
+	width: 300px;
+	opacity: 1;
+	z-index: 9999;
+	transition: all .3s;
+	&:hover {
+		border-color: #032e74;
+	}
+}
+
+.notification-icon {
+	width: 50px;
+	height: 50px;
+	border: 1px solid #09224a;
+	border-radius: 3px;
+}
+
+.notification-data {
+	flex: 1;
+	padding: 0 8px;
+	& p {
+		margin: 0;
+		font-size: 14px;
+		&.notification-ip {
+			font-weight: 600;
+			color: #12ffcd;
+		}
+		&.notification-content {
+			font-weight: 400;
+		}
+	}
+}
+
+.notification-status {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	font-size: 10px;
+  color: rgba(200, 200, 200, 0.5);
+  text-shadow: 1px 1px 1px #032763;
 }
