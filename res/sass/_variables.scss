@@ -1,1 +1,11 @@
+$grid-breakpoints: (
+  xxs: 0,
+  xs: 414px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px
+);
+
 $font_body: $font_gotham;

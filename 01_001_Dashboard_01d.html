@@ -76,7 +76,12 @@
                 </div>
               </div>
               <div class="btn-group">
-                <a class="nav-item nav-link user-nav-link" href="#"><svg class="icon"><use xlink:href="#search-icon"></use></svg></a>
+                <a class="nav-item nav-link user-nav-link" href="#" id="dearchDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><svg class="icon"><use xlink:href="#search-icon"></use></svg></a>
+                <div class="dropdown-menu dropdown-box search-bar-dropdown" aria-labelledby="searchDropDown">
+                  <div class="search-bar-container">
+                    <input type="text" placeholder="Search&hellip;">
+                  </div>
+                </div>
               </div>
               <div class="btn-group">
                 <a class="nav-item nav-link user-nav-link" href="#" id="notificationDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -87,20 +92,24 @@
                 </a>
                 <div class="dropdown-menu dropdown-box notification-menu" aria-labelledby="notificationDropDown">
                   <div class="notification-container">
-											<div class="notification-head">
-												<span>NOTIFICATIONS</span>
-												<i class="fa fa-check-square-o"></i>
-											</div>
-											<div class="notification-row">
-												<div class="notification-icon">
-												</div>
-												<div class="notification-data">
-													<p class="notification-ip">10.244.5.2</p>
-													<p class="notification-content">Pod Status is Updated</p>
-												</div>
-												<span class="notification-status">Pod Status Update</span>
-											</div>
+										<div class="notification-head">
+											<span>NOTIFICATIONS</span>
+                      <span class="fa-layers fa-fw check-icon">
+                        <i class="fa fa-check"></i>
+                        <i class="fa fa-check" data-fa-transform="right-7" style="color: #61cfb2;"></i>
+                      </span>
 										</div>
+										<div class="notification-row">
+											<div class="notification-icon">
+                        <img src="..." alt="icon here">
+											</div>
+											<div class="notification-data">
+												<p class="notification-ip">10.244.5.2</p>
+												<p class="notification-content">Pod Status is Updated</p>
+											</div>
+											<span class="notification-status">Pod Status Update</span>
+										</div>
+									</div>
                 </div>
               </div>
               <a class="nav-item nav-link user-nav-link" href="#"><svg class="icon"><use xlink:href="#settings-icon"></use></svg></a>
@@ -132,38 +141,36 @@
 
               <div class="threats-col">
                 <h1 class="activity-title">Violations &amp; Threats</h1>
-                <div class="activity-content">
-                  <div class="chart-container">
-                    <div class="marker red">
-                      <span class="marker-inner">12</span>
-                    </div>
-                    <div class="chart-wrap">
-                      <h2 class="chart-title">Violations</h2>
-                      <div class="chart-box">
+                <div class="chart-container">
+                  <div class="marker red">
+                    <span class="marker-inner">12</span>
+                  </div>
+                  <div class="chart-wrap">
+                    <h2 class="chart-title">Violations</h2>
+                    <div class="chart-box">
 
-                      </div>
                     </div>
                   </div>
-                  <div class="chart-container">
-                    <div class="marker yellow">
-                      <span class="marker-inner">6</span>
-                    </div>
-                    <div class="chart-wrap">
-                      <h2 class="chart-title">Soft Violations</h2>
-                      <div class="chart-box">
+                </div>
+                <div class="chart-container">
+                  <div class="marker yellow">
+                    <span class="marker-inner">6</span>
+                  </div>
+                  <div class="chart-wrap">
+                    <h2 class="chart-title">Soft Violations</h2>
+                    <div class="chart-box">
 
-                      </div>
                     </div>
                   </div>
-                  <div class="chart-container">
-                    <div class="marker blue">
-                      <span class="marker-inner">3</span>
-                    </div>
-                    <div class="chart-wrap">
-                      <h2 class="chart-title">Behavior Anomalies</h2>
-                      <div class="chart-box">
+                </div>
+                <div class="chart-container">
+                  <div class="marker blue">
+                    <span class="marker-inner">3</span>
+                  </div>
+                  <div class="chart-wrap">
+                    <h2 class="chart-title">Behavior Anomalies</h2>
+                    <div class="chart-box">
 
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -273,7 +280,7 @@
 
           </div>
 
-          <div class="col-12 col-sm-6 d-xl-none">
+          <div class="col-12 col-sm-7 d-xl-none">
             <div class="row">
               <div class="col-12 pt-4">
                 <div class="chart-head">

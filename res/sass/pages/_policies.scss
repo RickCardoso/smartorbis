@@ -1,0 +1,75 @@
+.policy-data-container {
+  flex: 1;
+  padding: 32px;
+  background-color: #022865;
+  @include crossShadow(0 0 16px 0 rgba(0, 0, 0, 0.2));
+  @include crossBorder(5px);
+  @include media-breakpoint-down(md) {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 32px 15px
+  }
+  & h1 {
+    font-size: 1em;
+    color: #e7e7e7;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  & table {
+    text-transform: uppercase;
+    & tbody {
+      max-height: 570px;
+      & tr {
+        cursor: pointer;
+        @include crossTransition(all .3s);
+        &:hover,
+        &:focus,
+        &.active {
+          background-color: #fff;
+          & td {
+            color: #022865;
+          }
+        }
+      }
+    }
+    & th,
+    & td {
+      &:first-of-type {
+        text-align: right;
+      }
+      &:nth-of-type(3),
+      &:last-of-type {
+        text-align: center;
+      }
+    }
+    & td:nth-of-type(1),
+    & th:nth-of-type(1) {
+      @include make-col(1);
+    }
+    & td:nth-of-type(2),
+    & th:nth-of-type(2) {
+      @include make-col(3);
+    }
+    & td:nth-of-type(3),
+    & th:nth-of-type(3) {
+      @include make-col(1);
+    }
+    & td:nth-of-type(4),
+    & th:nth-of-type(4) {
+      @include make-col(1);
+    }
+    & td:nth-of-type(5),
+    & th:nth-of-type(5) {
+      @include make-col(3);
+    }
+    & td:nth-of-type(6),
+    & th:nth-of-type(6) {
+      @include make-col(1);
+    }
+    & td:nth-of-type(7),
+    & th:nth-of-type(7) {
+      @include make-col(2);
+    }
+  }
+}

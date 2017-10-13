@@ -2,8 +2,12 @@
   max-width: 1620px;
   width: 100%;
   margin: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  &.activity {
+    padding-top: 1.125rem;
+    padding-bottom: 2.5rem;
+  }
 }
 
 .app-header {
@@ -26,4 +30,11 @@
   & p {
     color: #7aa1df;
   }
+}
+
+.activity-content {
+  flex: 1;
+  padding: 0 15px;
+  min-height: 750px;
+  height: 100%;
 }

@@ -1,0 +1,97 @@
+.topology-col {
+  @include make-col-ready();
+  flex: 1;
+  @include media-breakpoint-down(lg) {
+    @include make-col(1, 1);
+  }
+}
+
+.asset-detail-col {
+  @include make-col-ready();
+  flex: 0 0 396px;
+  max-width: 396px;
+  @include media-breakpoint-down(lg) {
+    @include make-col(1, 1);
+    padding-top: 20px;
+  }
+}
+
+.asset-detail-container,
+.topology-container {
+  @include crossShadow(0 0 16px 0 rgba(0, 0, 0, 0.2));
+  @include crossBorder(5px);
+  height: 100%;
+  padding: 27px 30px;
+}
+.asset-detail-container {
+  background-image: url('../img/visibility/bg-asset-detail.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: cover;
+}
+.topology-container {
+  background-image: url('../img/visibility/bg-topology.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: cover;
+}
+
+.asset-parameters {
+  border-bottom: 1px solid #61cfb2;
+  & h1 {
+    font-size: 0.875em;
+    color: #7aa1df;
+    margin-bottom: 0.3em;
+  }
+  & p {
+    font-size: 1.125em;
+    color: #fff;
+    line-height: 1.3;
+    margin-bottom: 1.625em;
+  }
+}
+
+.traffic-parameters {
+  & h1 {
+    margin-top: 1.9em;
+    margin-bottom: 1.7em;
+    font-size: 0.875em;
+    color: #7aa1df;
+  }
+  @include media-breakpoint-down(xxl) {
+    font-size: 0.9em;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 0.7em;
+  }
+}
+
+.traffic-block {
+  margin-bottom: 1.7em;
+  font-size: 0.875em;
+  fill: #7aa1df;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .check-icon {
+    flex: 0 0 17px;
+    max-width: 17px;
+  }
+  & .ip:first-of-type {
+    margin-left: 3%;
+    margin-right: 5.5%;
+  }
+  & .load-rate {
+    margin-right: 5.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    & .rotate-180 {
+      @include crossTransform(rotate(180deg));
+    }
+  }
+  &:hover {
+    fill: #61cfb2;
+  }
+}

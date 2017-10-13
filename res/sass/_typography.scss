@@ -6,6 +6,140 @@
   font-size: 0.95em;
   text-transform: uppercase;
   @include media-breakpoint-down(sm) {
-    margin-top: 40px;    
+    margin-top: 40px;
+  }
+}
+
+.page-title {
+  font-size: 1em;
+  padding: 0 0.5rem 2rem;
+  margin-bottom: 0;
+  color: #e7e7e7;
+  text-transform: uppercase;
+}
+
+
+/* Links */
+a {
+  @include crossTransition(all .3s);
+}
+
+
+/* Tables */
+// table {
+//   &.fixed-header {
+//     table-layout: fixed;
+//   }
+//   & thead {
+//     display: block;
+//   }
+//   & tbody {
+//     overflow: auto;
+//     height: 550px;
+//     display: block;
+//   }
+//   width: 100%;
+//   text-transform: uppercase;
+//   & tr {
+//     display: block;
+//     width: 100%;
+//     &:nth-of-type(1) td {
+//       padding-top: 27px;
+//     }
+//   }
+//   & th,
+//   & td {
+//     &:first-of-type {
+//       padding-left: 30px;
+//     }
+//     &:last-of-type {
+//       text-align: center;
+//     }
+//   }
+//   & th {
+//     font-size: 0.75em;
+//     color: #7aa1df;
+//     font-weight: 400;
+//     border-bottom: 1px solid #61cfb2;
+//     padding: 30px 0;
+//   }
+//   & td {
+//     padding: 12px 0;
+//     font-size: 0.75em;
+//     color: #e7e7e7;
+//     & a {
+//       color: #61cfb2;
+//       font-weight: 600;
+//       @include crossBorder(5px);
+//       padding: 8px;
+//       &:hover,
+//       &:focus {
+//         text-decoration: none;
+//         background-color: #61cfb2;
+//         color: #022865;
+//       }
+//     }
+//   }
+// }
+
+table.flex-table {
+  display: block;
+  font-size: 1em;
+  @include media-breakpoint-down(lg) {
+    font-size: 0.9em;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 0.8em;
+  }
+  @include media-breakpoint-down(xs) {
+    overflow: scroll;
+  }
+  & thead.table-block {
+    margin-bottom: 12px;
+    padding-right: 34px;
+  }
+  & tbody.table-block {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    @include media-breakpoint-down(xs) {
+      overflow-y: hidden;
+    }
+  }
+  & .table-block {
+    @include make-container();
+    display: block;
+    & tr {
+      @include make-row();
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+    & td,
+    & th {
+      @include make-col-ready();
+    }
+    & th {
+      font-size: 0.75em;
+      color: #7aa1df;
+      font-weight: 400;
+      border-bottom: 1px solid #61cfb2;
+      padding: 24px 5px;
+    }
+    & td {
+      padding: 12px 5px;
+      font-size: 0.75em;
+      color: #e7e7e7;
+      & a {
+        color: #61cfb2;
+        font-weight: 600;
+        @include crossBorder(5px);
+        padding: 8px;
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          background-color: #61cfb2;
+          color: #022865;
+        }
+      }
+    }
   }
 }

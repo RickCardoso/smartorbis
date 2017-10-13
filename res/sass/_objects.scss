@@ -2,6 +2,7 @@
   @include crossGradient(radial-gradient(#081839, #061433));
   border: 2px solid #2e3192;
   @include crossBorder(50%);
+  min-width: 57px;
   width: 57px;
   height: 57px;
   & span.marker-inner {
@@ -23,6 +24,60 @@
   }
   &.blue {
     border-color: #61cfb2;
+  }
+
+  // topology items
+  &.topology-item {
+    background: transparent;
+    border-color: #e7e7e7;
+    fill: #e7e7e7;
+    width: 63px;
+    height: 63px;
+    min-width: 63px;
+    min-height: 63px;
+    & span.marker-inner {
+      background: transparent;
+    }
+    &.active {
+      @include crossGradient(radial-gradient(#081839, #061433));
+      border: 2px solid #2e3192;
+      fill: #fff;
+      border-color: #61cfb2;
+      & span.marker-inner {
+        background: #09224a;
+      }
+    }
+    &.pe,
+    &.pi {
+      border-color: #ff1744;
+      position: relative;
+      &:after {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        font-size: 12.5px;
+        color: #e7e7e7;
+        top: -8px;
+        left: -9px;
+        border: 5px solid #1a3765;
+        background-color: #ff1744;
+        color: #fff;
+        @include crossBorder(50%);
+        width: 30px;
+        height: 30px;
+      }
+    }
+    &.pe {
+      &:after {
+        content: 'PE';
+      }
+    }
+    &.pi {
+      &:after {
+        content: 'PI';
+      }
+    }
   }
 }
 
@@ -55,11 +110,11 @@
       border-top: 1px solid #032763;
     }
     border-bottom: 1px solid #032763;
-    background: #032e74;
+    background: #09224a;
     color: #fff;
     &:hover,
     &:focus {
-      background: #09224a;
+      background: #032e74;
       color: #61cfb2;
     }
   }
@@ -90,6 +145,32 @@ option {
 	background-color: #12ffcd;
 }
 
+// search dropdown
+.search-bar-dropdown {
+  @include crossTransform(translateX(-50%));
+}
+.search-bar-container {
+  padding: 5px 10px;
+}
+
+input {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 0.75em;
+  color: #12ffcd;
+  height: 32px;
+  width: 240px;
+  @include crossBorder(5px);
+  @include crossTransition(all .3s);
+  &:hover,
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+}
+
 // notifications
 .notification-menu {
   left: 50%;
@@ -105,10 +186,10 @@ option {
 	border-bottom: 1px solid #09224a;
 	padding: 8px;
   color: #fff;
-	& i {
+	& .check-icon {
 		position: absolute;
 		top: 12px;
-		right: 8px;
+		right: 18px;
 	}
 }
 
@@ -120,11 +201,9 @@ option {
 	align-items: center;
 	border-bottom: 1px solid #09224a;
 	padding: 8px;
+  @include crossTransition(all .3s);
 	&:hover {
-		background: #09224a;
-		.notification-icon {
-			border-color: #032e74;
-		}
+    background: #032e74;
 	}
 }
 
@@ -151,6 +230,8 @@ option {
 	height: 50px;
 	border: 1px solid #09224a;
 	border-radius: 3px;
+  color: #fff;
+  fill: #fff;
 }
 
 .notification-data {
@@ -176,4 +257,66 @@ option {
 	font-size: 10px;
   color: rgba(200, 200, 200, 0.5);
   text-shadow: 1px 1px 1px #032763;
+}
+
+// activity menu
+.activity-menu {
+  flex: 0 0 282px;
+  max-width: 282px;
+  padding: 0 15px;
+  @include media-breakpoint-down(md) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+}
+
+.activity-btn-container {
+  padding: 20px 8px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  & .marker {
+    fill: #e7e7e7;
+    height: 68px;
+    width: 68px;
+    min-width: 68px;
+    & span.marker-inner {
+      margin: 11%;
+      height: 78%;
+    }
+  }
+  & .marker,
+  & .btn-title-container {
+    @include crossTransition(all .3s);
+  }
+  &:hover,
+  &:focus,
+  &.active {
+    text-decoration: none;
+    & .marker {
+      fill: #fff;
+      border-color: #61cfb2;
+    }
+    & .btn-title-container {
+      border-color: #61cfb2;
+      color: #fff;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    flex: 1 0 auto;
+  }
+}
+
+.btn-title-container {
+  font-size: 0.875em;
+  color: #7aa1df;
+  margin-left: 9px;
+  padding: 4px 8px;
+  border-bottom: 1px solid transparent;
+  flex: 1;
 }
