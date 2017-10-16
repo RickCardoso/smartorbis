@@ -247,24 +247,33 @@
               <h1>Cluster Policies</h1>
               <div class="table-menu">
                 <div class="table-options">
-                  <select class="custom-select select-std">
-                    <option value="kubernets" selected>Kubernets</option>
+                  <select class="custom-select select-std policy-select">
+                    <option value="all" selected>All Policies</option>
                     <option value="1">Option 1</option>
                     <option value="2">Option 2</option>
                     <option value="3">Option 3</option>
                     <span class="host-icon"><i class="fa fa-triangle fa-rotate-180"></i></span>
                   </select>
-                  <i class="fa fa-ellipsis-v"></i>
+                  <div>
+                    <a class="btn btn-options" href="#" id="policyDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-ellipsis-v"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-box" aria-labelledby="policyDropDown">
+                      <a class="dropdown-item" href="#">Option 1</a>
+                      <a class="dropdown-item" href="#">Option 2</a>
+                      <a class="dropdown-item" href="#">Option 3</a>
+                    </div>
+                  </div>
                 </div>
                 <div class="file-options">
-                  <button class="btn-std">Upload</button>
-                  <button class="btn-std">Choose File</button>
+                  <button class="btn btn-std btn-file">Upload</button>
+                  <button class="btn btn-std btn-file">Choose File</button>
                 </div>
               </div>
               <table class="flex-table">
                 <thead class="table-block">
                   <tr>
-                    <th><i class="fa fa-check" data-fa-transform="shrink-3.5" data-fa-compose="fa fa-square"></i></th>
+                    <th><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></th>
                     <th>Policy ID</th>
                     <th>Active</th>
                     <th>Type</th>
@@ -273,9 +282,9 @@
                     <th>Violation</th>
                   </tr>
                 </thead>
-                <tbody class="table-block">
-                  <tr class="active">
-                    <td><i class="fa fa-check" data-fa-transform="shrink-3.5" data-fa-compose="fa fa-square"></i></td>
+                <tbody class="table-block" id="policy-table">
+                  <tr class="selected active">
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Manual</td>
@@ -283,8 +292,8 @@
                     <td>07/19/17 10:20</td>
                     <td>-</td>
                   </tr>
-                  <tr>
-                    <td><i class="far fa-square"></i></td>
+                  <tr class="active">
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -293,7 +302,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -301,8 +310,8 @@
                     <td>07/19/17 10:20</td>
                     <td>-</td>
                   </tr>
-                  <tr>
-                    <td><i class="far fa-square"></i></td>
+                  <tr class="active">
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -310,8 +319,8 @@
                     <td>07/19/17 10:20</td>
                     <td>-</td>
                   </tr>
-                  <tr>
-                    <td><i class="far fa-square"></i></td>
+                  <tr class="violated">
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -320,7 +329,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -329,7 +338,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -338,7 +347,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -347,7 +356,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -356,7 +365,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -365,7 +374,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -374,7 +383,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -383,7 +392,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -392,7 +401,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -401,7 +410,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -410,7 +419,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -419,7 +428,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -428,7 +437,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -437,7 +446,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -446,7 +455,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -455,7 +464,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -464,7 +473,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -473,7 +482,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -482,7 +491,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -491,7 +500,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -500,7 +509,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -509,7 +518,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -518,7 +527,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -527,7 +536,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -536,7 +545,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -545,7 +554,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -554,7 +563,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -563,7 +572,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -572,7 +581,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -581,7 +590,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -590,7 +599,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -599,7 +608,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -608,7 +617,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -617,7 +626,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -626,7 +635,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -635,7 +644,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -644,7 +653,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -653,7 +662,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -662,7 +671,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -671,7 +680,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -680,7 +689,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -689,7 +698,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -698,7 +707,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -707,7 +716,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -716,7 +725,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -725,7 +734,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -734,7 +743,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -743,7 +752,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -752,7 +761,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -761,7 +770,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -770,7 +779,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -779,7 +788,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -788,7 +797,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -797,7 +806,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -806,7 +815,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -815,7 +824,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -824,7 +833,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -833,7 +842,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -842,7 +851,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -851,7 +860,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -860,7 +869,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -869,7 +878,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -878,7 +887,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -887,7 +896,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -896,7 +905,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -905,7 +914,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -914,7 +923,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -923,7 +932,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -932,7 +941,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -941,7 +950,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -950,7 +959,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -959,7 +968,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -968,7 +977,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -977,7 +986,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -986,7 +995,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -995,7 +1004,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1004,7 +1013,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1013,7 +1022,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1022,7 +1031,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1031,7 +1040,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1040,7 +1049,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1049,7 +1058,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1058,7 +1067,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1067,7 +1076,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1076,7 +1085,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1085,7 +1094,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1094,7 +1103,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1103,7 +1112,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1112,7 +1121,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1121,7 +1130,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1130,7 +1139,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1139,7 +1148,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1148,7 +1157,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1157,7 +1166,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1166,7 +1175,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1175,7 +1184,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1184,7 +1193,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1193,7 +1202,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1202,7 +1211,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1211,7 +1220,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1220,7 +1229,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1229,7 +1238,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-square"></i></td>
+                    <td><div class="policy-check-box"><i class="fa fa-check check-mark"></div></i></td>
                     <td>CART-2836450845-32TZ6</td>
                     <td><i class="fa fa-circle"></i></td>
                     <td>Auto</td>
@@ -1261,10 +1270,14 @@
   <script src="ext-res/bootstrap/js/bootstrap.js" type="text/javascript"></script> <!-- Bootstrap -->
 
   <!-- Font-Awesome -->
-    <script defer src="ext-res/font-awesome/packs/solid.js"></script>
-    <script defer src="ext-res/font-awesome/packs/regular.js"></script>
-    <script defer src="ext-res/font-awesome/packs/light.js"></script>
-    <script defer src="ext-res/font-awesome/fontawesome.js"></script>
+    <script defer src="ext-res/font-awesome/js/packs/solid.js"></script>
+    <script defer src="ext-res/font-awesome/js/packs/regular.js"></script>
+    <script defer src="ext-res/font-awesome/js/packs/light.js"></script>
+    <script defer src="ext-res/font-awesome/js/fontawesome.js"></script>
   <!-- -->
+
+  <!-- Custom jQuery -->
+    <script src="res/js/app.js"></script>
+  <!---->
 
 </html>

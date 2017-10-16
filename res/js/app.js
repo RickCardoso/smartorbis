@@ -9,9 +9,19 @@ $(document).ready(function() {
   });
 
   // policy row select
-  $('.policy-data-container').find('tr').click(function() {
+  $('.policy-data-container > table > tbody > tr').click(function() {
     $(this).toggleClass('selected');
-    $(this).find('i').toggleClass('far fa-square fa fa-check-square');
+  });
+
+  // policy modal tabs
+  $('#policy-tab a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+  });
+
+  // custom check-box
+  $('.check-box').click(function() {
+    $(this).toggleClass('selected');
   });
 
 });

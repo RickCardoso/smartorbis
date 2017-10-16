@@ -1,3 +1,21 @@
+.topology-filter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+  & select,
+  & .kubernets-check {
+    padding: 0 7px;
+  }
+}
+
+.kubernets-check {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
 .topology-col {
   @include make-col-ready();
   flex: 1;

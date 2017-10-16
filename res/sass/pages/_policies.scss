@@ -18,6 +18,15 @@
   }
   & table {
     text-transform: uppercase;
+    & .policy-check-box {
+      @extend .check-box;
+      margin: auto 0 auto auto;
+    }
+    & thead {
+      & tr th {
+        height: 67px;
+      }
+    }
     & tbody {
       max-height: 570px;
       & tr {
@@ -25,10 +34,31 @@
         @include crossTransition(all .3s);
         &:hover,
         &:focus,
-        &.active {
+        &.selected {
           background-color: #fff;
+          & .policy-check-box {
+            border: 2px solid #022865;
+          }
           & td {
             color: #022865;
+          }
+        }
+        &.selected {
+          & .policy-check-box {
+            background-color: #022865;
+            & .check-mark {
+              display: block;
+            }
+          }
+        }
+        &.active {
+          & td:nth-of-type(3) {
+            color: #4eec82;
+          }
+        }
+        &.violated {
+          & td:nth-of-type(3) {
+            color: #fa4040;
           }
         }
       }
@@ -70,6 +100,331 @@
     & td:nth-of-type(7),
     & th:nth-of-type(7) {
       @include make-col(2);
+    }
+    @include media-breakpoint-down(xs) {
+      max-height: 700px;
+      & .table-block {
+        width: 700px;
+      }
+      & tbody {
+        max-height: 100%;
+      }
+      & td:nth-of-type(1),
+      & th:nth-of-type(1) {
+        flex: 0 0 40px;
+        max-width: 40px;
+      }
+      & td:nth-of-type(2),
+      & th:nth-of-type(2) {
+        flex: 0 0 150px;
+        max-width: 150px;
+      }
+      & td:nth-of-type(3),
+      & th:nth-of-type(3) {
+        flex: 0 0 90px;
+        max-width: 90px;
+      }
+      & td:nth-of-type(4),
+      & th:nth-of-type(4) {
+        flex: 0 0 80px;
+        max-width: 80px;
+      }
+      & td:nth-of-type(5),
+      & th:nth-of-type(5) {
+        flex: 0 0 150px;
+        max-width: 150px;
+      }
+      & td:nth-of-type(6),
+      & th:nth-of-type(6) {
+        flex: 0 0 90px;
+        max-width: 90px;
+      }
+      & td:nth-of-type(7),
+      & th:nth-of-type(7) {
+        flex: 0 0 100px;
+        max-width: 100px;
+      }
+    }
+  }
+}
+
+.table-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  margin: 0 auto 40px;
+  max-width: 1135px;
+}
+
+.table-options {
+  display: flex;
+  align-items: center;
+}
+
+.file-options {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  @include media-breakpoint-down(xs) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex: 1;
+  }
+}
+
+#policy-modal {
+  padding-right: 0 !important;
+}
+
+.policy-modal {
+  max-width: 1058px;
+  max-height: 880px;
+  @include crossShadow(0 0 16px 0 rgba(0, 0, 0, 0.20));
+  & .modal-content {
+    background-color: #022865;
+    @include crossBorder(5px);
+    & .modal-header,
+    & .modal-footer {
+      border: none;
+    }
+    & .btn-file {
+      font-size: 1em;
+      max-width: 144px;
+      margin-left: 30px;
+    }
+    & .modal-header {
+      font-size: 0.95em;
+      color: #e7e7e7;
+      flex-flow: row wrap;
+      & h5,
+      & .policy-details,
+      & .policy-buttons {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      & h5 {
+        text-transform: uppercase;
+      }
+      & .policy-details {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: row wrap;
+        & p {
+          margin-bottom: 0;
+          flex: 0 1 auto;
+          font-size: 0.875em;
+          color: #eceff4;
+          padding: 5px 15px;
+          & span.title {
+            color: #7aa1df;
+          }
+          @include media-breakpoint-down(sm) {
+            flex: 0 0 50%;
+            max-width: 50%;
+          }
+          @include media-breakpoint-down(xxs) {
+            flex: 0 0 100%;
+            max-width: 100%;
+          }
+        }
+      }
+      & .policy-buttons {
+        margin-top: 30px;
+        display: flex;
+        justify-content: flex-end;
+      }
+      & .btn-file {
+        font-size: 1.055em;
+      }
+    }
+    & .modal-body {
+      & .nav-tabs {
+        border-bottom: 1px solid rgba(231, 231, 231, 0.2);
+        & .nav-item {
+          & .nav-link {
+            background-color: transparent;
+            color: #7aa1df;
+            font-size: 0.75em;
+            border-color: transparent;
+            &:hover,
+            &:focus,
+            &.active {
+              border-bottom-color: #61cfb2;
+              color: #61cfb2;
+            }
+          }
+        }
+      }
+      & .tab-content {
+        & .tab-pane {
+          padding-top: 18px;
+        }
+        position: relative;
+        & .btn-file {
+          position: absolute;
+          top: 12px;
+          right: 6px;
+          max-width: 78px;
+        }
+        & .add-icon,
+        & .remove-icon {
+          font-size: 18px;
+          padding: 5px;
+          @include crossTransition(all .3s);
+        }
+        & .add-icon {
+          color: #7aa1df;
+          &:hover {
+            color: #fff;
+          }
+        }
+        & .remove-icon {
+          color: #61cfb2;
+          &:hover {
+            color: #fa4040;
+          }
+        }
+        & .dynamic-policy {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-start;
+          align-items: center;
+          & h1 {
+            display: flex;
+            align-items: center;
+            margin-top: 4px;
+            margin-bottom: 1px;
+            margin-left: 6px;
+            flex: 0 0 100%;
+            max-width: 100%;
+            font-size: 0.75em;
+            color: #61cfb2;
+            text-transform: uppercase;
+          }
+          & .item-col {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 10px 6px;
+          }
+          & .item-box {
+            background-color: rgba(231, 231, 231, 0.2);
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            padding: 12px 8px 20px 8px;
+            & h2 {
+              margin-bottom: 8px;
+              color: #7aa1df;
+              font-size: 1em;
+              text-transform: uppercase;
+            }
+            & input,
+            & select {
+              background-color: #e1e1e1;
+              color: #022865;
+              font-size: 1em;
+              @include crossBorder(5px);
+              text-transform: none;
+              height: 31px;
+              border: none;
+            }
+            & .box-col {
+              flex: 1 1 auto;
+              padding: 10px 13px;
+              margin-top: auto;
+              & input {
+                width: 100%;
+              }
+              &:last-of-type {
+                flex: 0 1 auto;
+              }
+            }
+            & .remove-icon {
+              align-self: flex-end;
+            }
+          }
+          & .pod-col {
+            flex: 0 0 50%;
+            max-width: 50%;
+            &:nth-of-type(odd) {
+              padding-right: 10px;
+            }
+            &:nth-of-type(even) {
+              padding-left: 10px;
+            }
+            @include media-breakpoint-down(sm) {
+              flex: 0 0 100%;
+              max-width: 100%;
+              &:nth-of-type(odd) {
+                padding-right: 6px;
+              }
+              &:nth-of-type(even) {
+                padding-left: 6px;
+              }
+            }
+            & .pod-box {
+              padding: 12px 17px 20px 22px;
+              & .dynamic-pod {
+                display: flex;
+                flex-flow: row wrap;
+                flex: 0 0 100%;
+                max-width: 100%;
+                justify-content: space-between;
+                margin-top: 10px;
+                & h2 {
+                  text-transform: none;
+                  margin: auto 14px auto 0;
+                }
+                & select {
+                  flex: 1 1 auto;
+                  margin: auto 5px auto auto;
+                }
+                & .add-icon {
+                  margin-left: auto;
+                }
+                @include media-breakpoint-down(xxs) {
+                  & h2 {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    margin: 5px 0 5px 0;
+                  }
+                  & .add-icon {
+                    margin-left: auto;
+                  }
+                }
+              }
+              & .pod-role {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-flow: row wrap;
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin-top: 20px;
+                & input {
+                  width: 42%;
+                }
+                @include media-breakpoint-down(xxs) {
+                  & input {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    margin-top: 5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    & .modal-footer {
+      & .btn-file {
+        margin-left: 30px;
+        margin-right: 0;
+      }
     }
   }
 }

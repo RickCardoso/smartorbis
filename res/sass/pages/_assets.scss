@@ -8,7 +8,7 @@
     flex: 0 0 100%;
     max-width: 100%;
     margin: 0;
-    padding: 32px 15px
+    padding: 32px 15px;
   }
   & h1 {
     font-size: 1em;
@@ -64,6 +64,9 @@
     }
     @include media-breakpoint-down(xs) {
       max-height: 700px;
+      & .table-block {
+        width: 540px;
+      }
       & tbody {
         max-height: 100%;
       }

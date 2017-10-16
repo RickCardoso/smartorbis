@@ -88,6 +88,12 @@
   margin-left: -5px;
   padding-right: 5px;
   padding-left: 5px;
+  &.policy-select {
+    text-transform: uppercase;
+    font-size: 0.75em;
+    border-bottom: 1px solid #61cfb2;
+    @include crossBorder(0);
+  }
 }
 
 .btn-icon {
@@ -100,6 +106,38 @@
   &:active {
     fill: #fff;
     text-decoration: none;
+  }
+}
+
+.btn-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  min-width: 30px;
+  background-color: transparent;
+  color: #aaaaaa;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #aaaaaa;
+    color: #022865;
+  }
+}
+
+.btn-file {
+  max-width: 111px;
+  width: 100%;
+  color: #e7e7e7;
+  border: 1px solid #e7e7e7;
+  background-color: transparent;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  margin-left: 20px;
+  &:hover,
+  &:focus {
+    background-color: #61cfb2;
+    border-color: #61cfb2;
   }
 }
 
@@ -213,15 +251,17 @@ input {
 	bottom: 20px;
 	right: 20px;
 	background: #032e74;
-	border: 1px solid #09224a;
-	border-top: 3px solid #fff;
+	border: 1px solid #fff;
+	@include crossShadow(0 -3px 0 0 #fff);
 	border-radius: 0 0 5px 5px;
 	width: 300px;
 	opacity: 1;
 	z-index: 9999;
 	transition: all .3s;
 	&:hover {
-		border-color: #032e74;
+    @include crossShadow(0 -3px 0 0 #12ffcd);
+    border-color: #12ffcd;
+    background: #09224a;
 	}
 }
 
@@ -319,4 +359,33 @@ input {
   padding: 4px 8px;
   border-bottom: 1px solid transparent;
   flex: 1;
+}
+
+
+// check-box
+.check-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  min-height: 14px;
+  border: 2px solid #7aa1df;
+  color: #7aa1df;
+  font-size: 12px;
+  margin-right: 5px;
+  @include crossBorder(2px);
+  @include crossTransition(all .3s);
+  & .check-mark {
+    display: none;
+  }
+  &.selected {
+    color: #022865;
+    background-color: #12ffcd;
+    border-color: #12ffcd;
+    & .check-mark {
+      display: block;
+    }
+  }
 }
