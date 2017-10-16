@@ -1,0 +1,41 @@
+.app-wrap { // limit width
+  max-width: 1620px;
+  width: 100%;
+  margin: auto;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  &.activity {
+    padding-top: 1.125rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+.app-header {
+  background: #032763;
+  @include crossShadow(0 1px 2px 0 rgba(0, 0, 0, 0.19));
+  & .app-wrap {
+    background: #032e74;
+  }
+}
+
+.app-main {
+  background: #09224a;
+}
+
+.app-footer {
+  background: #061a3c;
+  font-size: 0.75em;
+  text-align: center;
+  padding: 21px 0 146px;
+  & p {
+    color: #7aa1df;
+  }
+}
+
+.activity-content {
+  flex: 1;
+  padding: 0 15px;
+  min-height: 750px;
+  height: 100%;
+  max-width: 100%;
+}
